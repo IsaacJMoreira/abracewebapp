@@ -21,7 +21,7 @@ const RootLayout: FC<MyProps> = (props) => {
         <Theme>
           <Header />
           <main>{props.children}</main>
-          
+          <Footer/>
         </Theme>
       </body>
     </html>

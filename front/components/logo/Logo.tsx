@@ -5,7 +5,6 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface MyProps {
   children?: ReactNode;
-  logoName?: string;
   logoNI: StaticImport;
   logoAlt: string;
 }
