@@ -13,7 +13,7 @@ interface MyProps {
 const Logo: FC<MyProps> = (props) => {
   return (
     <div>             
-          <NextImage className="AvatarImage img_36px"
+          <NextImage className="IconImg img_36px"
             src={props.logoNI}
             alt={props.logoAlt}
             priority
