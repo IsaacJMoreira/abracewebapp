@@ -10,6 +10,9 @@ const Home = () => {
         src={stdBG}
         alt="Cachorro de pelo marrom com patas brancas apoiado num background verde"
       />
+      <div className="relative">
+      <div className="absolute">çlskfdgçzkljdf</div>
+      </div>
     </section>
   );
 };
