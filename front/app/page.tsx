@@ -1,9 +1,13 @@
-import React from 'react'
+"use client"
+import Tweet from '../components/logo/Logo'
 
-const page = () => {
+
+const Home = () => {
   return (
-    <div>page</div>
+    <section className="w-full flex-center fles-col">
+        {/* <h1 className="head_text text-center">pussy and dick</h1> */}
+    </section>
   )
 }
 
-export default page
+export default Home
