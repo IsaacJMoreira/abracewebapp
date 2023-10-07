@@ -1,22 +1,23 @@
 import * as Avatar from "@radix-ui/react-avatar";
 import { FC, ReactNode } from "react";
+import NextImage from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface MyProps {
   children?: ReactNode;
   logoName?: string;
-  logoURL?:  string | undefined;
-  logoAlt?: string;
+  logoNI: StaticImport;
+  logoAlt: string;
 }
 
 const Logo: FC<MyProps> = (props) => {
   return (
-    <div>
-      <Avatar.Root className="AvatarRoot">
-        <Avatar.Image src={props.logoURL} alt={props.logoAlt} />
-        <Avatar.Fallback className="AvatarFallback" delayMs={600}>
-          {props.logoName}
-        </Avatar.Fallback>
-      </Avatar.Root>
+    <div>             
+          <NextImage className="AvatarImage img_36px"
+            src={props.logoNI}
+            alt={props.logoAlt}
+            priority
+          />     
     </div>
   );
 };
