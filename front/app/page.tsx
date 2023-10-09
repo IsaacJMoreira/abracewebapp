@@ -14,7 +14,7 @@ const Home = () => {
         <Flex align="center" direction="column" justify="between" gap="4">
           <Box>
             <Box className="h-[50vw]"></Box>
-            <Text align="center" size="9" weight="bold" as="div">
+            <Text color= 'lime' align="center" size="9" weight="bold" as="div">
               adote cães e gatos adultos
             </Text>
             <br />
