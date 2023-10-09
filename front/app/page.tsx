@@ -10,7 +10,7 @@ import { useEffect } from "react";
 const Home = () => {
   return (
     <section className="w-full flex-center fles-col main_background_color">
-      <Card className="w-screen h-fit absolute top-[100vw]">
+      <Card className="w-screen h-fit  top-[100vw]">
         <Flex align="center" direction="column" justify="between" gap="4">
           <Box>
             <Box className="h-48"></Box>
