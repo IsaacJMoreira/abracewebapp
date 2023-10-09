@@ -16,7 +16,7 @@ const userName = "Fulano";
 
 const Header = () => {
   return (
-    <Card variant='Ghost' size="1">
+    <Card variant='ghost' size="1">
       <Flex gap="1" align="center" direction="row" justify='between' >
         
           <Avatar
