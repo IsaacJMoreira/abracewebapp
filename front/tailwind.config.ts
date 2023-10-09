@@ -8,12 +8,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        satoshi: ['Satoshi', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
-        'primary-orange': '#FF5722',
-      }
+        'C1': '#EAF4E3',
+        'C2': '#F7EB7A',
+        'C3': '#BED66C',
+        'secondary': '#9EAD54',
+        'primary': '#96D279'     
+       }
     },
   },
   plugins: [],

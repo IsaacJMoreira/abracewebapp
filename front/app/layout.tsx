@@ -1,9 +1,12 @@
 import "@styles/globals.css";
 import "@radix-ui/themes/styles.css";
+// import '../styles/theme-config.css'
 import { FC, ReactNode } from "react";
 import { Theme } from "@radix-ui/themes";
 import Header from "../components/header/Header";
-import Footer from "@components/footer/Footer";
+
+
+const darkMode = "light";
 
 export const metadata = {
   title: "ABRACE",
@@ -18,10 +21,16 @@ const RootLayout: FC<MyProps> = (props) => {
   return (
     <html lang="pt-BR">
       <body>
-        <Theme>
+        <Theme          
+          grayColor="sage"
+          accentColor="lime"
+          panelBackground="translucent"
+          scaling="100%"
+          radius="large"
+          appearance={darkMode}
+        >
           <Header />
           <main>{props.children}</main>
-          <Footer/>
         </Theme>
       </body>
     </html>

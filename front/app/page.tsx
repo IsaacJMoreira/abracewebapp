@@ -1,18 +1,62 @@
 "use client";
+import { Card, Flex, Box, Text, Button } from "@radix-ui/themes";
 import NextImage from "next/image";
-import stdBG from "../public/assets/images/stdBG.png";
+import FrontDog from "../public/assets/images/FrontDog.png";
+import STDButton from "@components/stdButton/STDButton";
+import DONATEIcon from "../public/assets/icons/2904845 1.png";
+import VOLUNTEERIcon from "../public/assets/icons/volunteer-icon-10 1.png";
+import { useEffect } from "react";
 
 const Home = () => {
   return (
     <section className="w-full flex-center fles-col main_background_color">
+      <Card className="w-screen h-fit absolute top-[100vw]">
+        <Flex align="center" direction="column" justify="between" gap="4">
+          <Box>
+            <Box className="h-48"></Box>
+            <Text align="center" size="9" weight="bold" as="div">
+              adote cães e gatos adultos
+            </Text>
+            <br />
+            <br />
+            <Text align="center" size="5" weight="medium" as="div">
+              é como escolher um amigo pronto para festa! Eles já têm suas
+              personalidades definidas, são mais tranquilos e, melhor ainda,
+              você estará salvando uma vida!
+            </Text>
+            <br />
+            <Flex align="center" direction="column" justify="between" gap="4">
+              <Box>
+                <Button style={{ width: "75vw" }} size="3">
+                  ADOTAR
+                </Button>
+              </Box>
+            </Flex>
+            <br />
+            <Flex align="center" direction="column" justify="between" gap="4">
+              <Text as="div">você também pode ajudar essa causa animal</Text>
+              <Flex align="center" direction="row" justify="between" gap="4">
+                <STDButton
+                  iconAlt="Doe"
+                  iconNI={DONATEIcon}
+                  text="quero doar"
+                />
+                <STDButton
+                  iconAlt="vountariar"
+                  iconNI={VOLUNTEERIcon}
+                  text="voluntariar"
+                />
+              </Flex>
+            </Flex>
+          </Box>
+          <Box></Box>
+        </Flex>
+      </Card>
       <NextImage
-        className="w-screen"
-        src={stdBG}
-        alt="Cachorro de pelo marrom com patas brancas apoiado num background verde"
+        className="w-screen absolute top-24"
+        src={FrontDog}
+        alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
       />
-      <div className="relative">
-      <div className="absolute">çlskfdgçzkljdf</div>
-      </div>
     </section>
   );
 };
