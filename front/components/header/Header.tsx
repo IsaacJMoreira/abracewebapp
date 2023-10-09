@@ -1,12 +1,9 @@
 "use client";
-import NextImage from "next/image";
 import { Card, Flex, Avatar, Box } from "@radix-ui/themes";
 import STDButton from "@components/stdButton/STDButton";
-import GARD1 from "../../public/assets/images/gard1.png";
-import { FC, ReactNode } from "react";
 import WhoArU from "../../public/assets/icons/53324372.png";
 import Hi from "../../public/assets/icons/74dec39f3bdda7417bb318f5b98afe3e 1.png";
-import ABRACE from "../../public/assets/images/ABRACE.png";
+
 
 //this component should fetch the app logo
 //it also should display a different simbol of greating
