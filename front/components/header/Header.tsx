@@ -63,7 +63,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
             </Button>
           </Dialog.Close>
           <Dialog.Close>
-            <Button variant='solid' size="3">
+            <Button variant='solid' size="3" color="amber">
               <Cross1Icon width="18" height="18" />
               Fechar
             </Button>
@@ -78,7 +78,7 @@ const LoggedOutModal: FC<MyProps> = React.forwardRef(function (props, ref) {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button variant="solid" size="1" >
+        <Button variant="solid" size="1" color="amber" >
           <NextImage className="w-8" src={WhoArU} alt="Quem é você? LOGIN" />
           quem é você? <Separator orientation="vertical" size="1" /> LOGIN
         </Button>
@@ -108,7 +108,7 @@ const LoggedOutModal: FC<MyProps> = React.forwardRef(function (props, ref) {
 
           <Flex direction="row" justify="between" gap="3">
           <Dialog.Close>
-            <Button size="3" variant='solid'>
+            <Button size="3" variant='solid' color="amber">
               <Cross1Icon width="18" height="18" />
               Fechar
             </Button>
