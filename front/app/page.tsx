@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 const Home = () => {
   return (
-    <ScrollArea type="always" scrollbars="horizontal" style={{height: 'fit-content'}}>
+    <ScrollArea type="always" scrollbars="vertical" style={{height: 'fit-content'}}>
       <NextImage
         className="w-screen"
         src={FrontDog}
