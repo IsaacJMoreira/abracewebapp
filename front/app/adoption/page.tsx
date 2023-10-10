@@ -13,11 +13,11 @@ const Adoption = () => {
     <ScrollArea
       type="always"
       scrollbars="vertical"
-      style={{ width: "100vw" }}
+      
     >
       <Flex direction="column" justify='between' gap='3' >
         <AdoptionCard
-          URL="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
           age={12}
@@ -25,7 +25,7 @@ const Adoption = () => {
           furType="longo"
         />
         <AdoptionCard
-          URL="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
           age={12}
@@ -33,7 +33,7 @@ const Adoption = () => {
           furType="longo"
         />
         <AdoptionCard
-          URL="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
           age={12}

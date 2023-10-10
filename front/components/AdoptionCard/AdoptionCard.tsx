@@ -38,38 +38,39 @@ interface MyProps {
 
 const AdoptionCard: FC<MyProps> = (props) => {
   return (
-    <Card className="w-11/12">
-      <Flex className="w-screen">
+    <Card >
+      <Flex >
         <Box>
           <Inset clip="padding-box" side="top" pb="current">
-            <NextImage width="1" height='1' className="w-full" src={props.URL} alt={props.ALT} />
+            <NextImage
+              width="100"
+              height="100"
+              src={props.URL}
+              alt={props.ALT}
+            />
           </Inset>
 
-          <ScrollArea type="always" scrollbars="horizontal" className="w-screen">
-            <Flex direction="row" justify="between" gap="3">
+          <ScrollArea
+            type="always"
+            scrollbars="horizontal"
+            className="w-screen"
+          >
+            <Flex direction="row" justify="between" align='center' gap="3">
               <Card className="w-2/5 h-2/5">
-                <Text>{props.age}</Text>
-                <Text>idade</Text>
+                <Text as="div">{props.age}</Text>
+                <Text as="div">idade</Text>
               </Card>
               <Card className="w-2/5 h-2/5">
-                <Text>{props.sex}</Text>
-                <Text>sexo</Text>
+                <Text as="div">{props.sex}</Text>
+                <Text as="div">sexo</Text>
               </Card>
               <Card className="w-2/5 h-2/5">
-                <Text>{props.furType}</Text>
-                <Text>pelagem</Text>
+                <Text as="div">{props.furType}</Text>
+                <Text as="div">pelagem</Text>
               </Card>
               <Card className="w-2/5 h-2/5">
-                <Text>{props.color}</Text>
-                <Text>cor</Text>
-              </Card>
-              <Card className="w-2/5 h-2/5">
-                <Text>{props.color}</Text>
-                <Text>cor</Text>
-              </Card>
-              <Card className="w-2/5 h-2/5">
-                <Text>{props.color}</Text>
-                <Text>cor</Text>
+                <Text as="div">{props.color}</Text>
+                <Text as="div">cor</Text>
               </Card>
             </Flex>
           </ScrollArea>
