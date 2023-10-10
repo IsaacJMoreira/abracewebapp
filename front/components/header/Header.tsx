@@ -44,7 +44,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button  >
+        <Button  variant="surface" >
           <NextImage className="w-5" src={props.iconNI} alt={props.iconAlt} />
           {`olá, ${props.userName}`}
           <Separator orientation="vertical" size="1"></Separator>
@@ -57,13 +57,13 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
         <Dialog.Description>Sou uma descrição</Dialog.Description>
         <Flex direction="row" justify="between" gap="3">
           <Dialog.Close>
-            <Button   onClick={props.changeLogin}>
+            <Button  variant="surface" onClick={props.changeLogin}>
               <ExitIcon width="18" height="18"/>
               Logout
             </Button>
           </Dialog.Close>
           <Dialog.Close>
-            <Button >
+            <Button variant="surface">
               <Cross1Icon width="18" height="18" />
               Fechar
             </Button>
@@ -78,7 +78,7 @@ const LoggedOutModal: FC<MyProps> = React.forwardRef(function (props, ref) {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button >
+        <Button variant="surface" >
           <NextImage className="w-8" src={WhoArU} alt="Quem é você? LOGIN" />
           quem é você? <Separator orientation="vertical" size="1" /> LOGIN
         </Button>
@@ -108,13 +108,13 @@ const LoggedOutModal: FC<MyProps> = React.forwardRef(function (props, ref) {
 
           <Flex direction="row" justify="between" gap="3">
           <Dialog.Close>
-            <Button  >
+            <Button  variant="surface">
               <Cross1Icon width="18" height="18" />
               Fechar
             </Button>
           </Dialog.Close>
           <Dialog.Close>
-            <Button  onClick={props.changeLogin}>
+            <Button variant="surface" onClick={props.changeLogin}>
               <CheckIcon width="18" height="18" />
               Login
             </Button>
