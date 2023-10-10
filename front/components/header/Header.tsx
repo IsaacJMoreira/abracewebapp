@@ -44,7 +44,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button variant="surface" size="2" color="amber">
+        <Button  size="2" >
           <NextImage className="w-5" src={props.iconNI} alt={props.iconAlt} />
           {`olá, ${props.userName}`}
           <Separator orientation="vertical" size="1"></Separator>
@@ -57,13 +57,13 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
         <Dialog.Description>Sou uma descrição</Dialog.Description>
         <Flex direction="row" justify="between" gap="3">
           <Dialog.Close>
-            <Button variant="surface" size="3"  onClick={props.changeLogin}>
+            <Button   onClick={props.changeLogin}>
               <ExitIcon width="18" height="18"/>
               Logout
             </Button>
           </Dialog.Close>
           <Dialog.Close>
-            <Button variant='solid' size="3" color="amber">
+            <Button >
               <Cross1Icon width="18" height="18" />
               Fechar
             </Button>
@@ -78,7 +78,7 @@ const LoggedOutModal: FC<MyProps> = React.forwardRef(function (props, ref) {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button variant="solid" size="1" color="amber" >
+        <Button  size="1"  >
           <NextImage className="w-8" src={WhoArU} alt="Quem é você? LOGIN" />
           quem é você? <Separator orientation="vertical" size="1" /> LOGIN
         </Button>
@@ -108,13 +108,13 @@ const LoggedOutModal: FC<MyProps> = React.forwardRef(function (props, ref) {
 
           <Flex direction="row" justify="between" gap="3">
           <Dialog.Close>
-            <Button size="3" variant='solid' color="amber">
+            <Button  variant='solid'>
               <Cross1Icon width="18" height="18" />
               Fechar
             </Button>
           </Dialog.Close>
           <Dialog.Close>
-            <Button variant="surface" size="3" onClick={props.changeLogin}>
+            <Button variant="surface" onClick={props.changeLogin}>
               <CheckIcon width="18" height="18" />
               Login
             </Button>
@@ -140,7 +140,7 @@ const Header = () => {
   const [userName, setUserName] = useState("");
   return (
     <div className="sticky bg-[#ffffffaa] top-0 block h-fit w-screen p-2 z-50 backdrop-blur ">
-      <Theme radius="full" accentColor="amber">
+      <Theme radius="full" >
         <Flex align="center" justify="between">
           <Flex align="center" justify="between" gap="2">
             <Avatar
