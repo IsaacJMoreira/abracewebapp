@@ -13,8 +13,8 @@ const userName = "Fulano";
 const Header = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   return (
-    <Theme radius="none" accentColor="amber">
-      <Card >
+    <div className="sticky bg-[#ffffffaa] top-0 block h-fit w-screen p-4 z-50 backdrop-blur ">
+      <Theme radius="full" accentColor="amber">
         <Flex align="center" justify="between">
           <Flex align="center" justify="between" gap="5">
             <Avatar
@@ -43,7 +43,7 @@ const Header = () => {
             />
           ) : (
             <STDButton
-              variant="soft"
+              variant="surface"
               iconAlt="Hi!!!"
               iconNI={Hi}
               text={`olá, ${userName}`}
@@ -51,8 +51,8 @@ const Header = () => {
             />
           )}
         </Flex>
-      </Card>
-    </Theme>
+      </Theme>
+    </div>
   );
 };
 

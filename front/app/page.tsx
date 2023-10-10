@@ -1,5 +1,5 @@
 "use client";
-import { Card, Flex, Box, Text, Button } from "@radix-ui/themes";
+import { Card, Flex, Box, Text, Button, ScrollArea } from "@radix-ui/themes";
 import NextImage from "next/image";
 import FrontDog from "../public/assets/images/FrontDog.png";
 import STDButton from "@components/stdButton/STDButton";
@@ -9,12 +9,17 @@ import { useEffect } from "react";
 
 const Home = () => {
   return (
-    <section className="w-full flex-center fles-col main_background_color">
-      <Card variant="surface" className="w-screen h-fit relative top-[100vw]">
+    <ScrollArea type="always" scrollbars="horizontal" style={{height: 'fit-content'}}>
+      <NextImage
+        className="w-screen"
+        src={FrontDog}
+        alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
+      />
+      <Card variant="surface" className="w-screen -top-[52vw] -z-10">
         <Flex align="center" direction="column" justify="between" gap="4">
           <Box>
             <Box className="h-[50vw]"></Box>
-            <Text color= 'lime' align="center" size="9" weight="bold" as="div">
+            <Text color="lime" align="center" size="9" weight="bold" as="div">
               adoção de cães e gatos adultos
             </Text>
             <br />
@@ -33,7 +38,9 @@ const Home = () => {
             </Flex>
             <br />
             <Flex align="center" direction="column" justify="between" gap="4">
-              <Text align='center' size='3' weight='medium' as="div">você também pode ajudar essa causa animal</Text>
+              <Text align="center" size="3" weight="medium" as="div">
+                você também pode ajudar essa causa animal
+              </Text>
               <Flex align="center" direction="row" justify="between" gap="4">
                 <STDButton
                   iconAlt="Doe"
@@ -48,15 +55,10 @@ const Home = () => {
               </Flex>
             </Flex>
           </Box>
-          <Box></Box>
         </Flex>
+        <br />
       </Card>
-      <NextImage
-        className="w-screen absolute top-24"
-        src={FrontDog}
-        alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
-      />
-    </section>
+    </ScrollArea>
   );
 };
 
