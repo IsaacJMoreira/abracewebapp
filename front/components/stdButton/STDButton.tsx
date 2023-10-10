@@ -1,5 +1,5 @@
 import { Button } from "@radix-ui/themes";
-import { FC, ReactNode } from "react";
+import { FC, MouseEventHandler, ReactNode } from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import NextImage from "next/image";
 
@@ -9,11 +9,12 @@ interface MyProps {
     iconAlt: string;
     text?: string;
     variant?: "solid" | "soft" | "surface" | "outline" | "ghost" | undefined;
+    callBack?: any;
   }
 
 const STDButton: FC<MyProps> = (props) => {
   return (
-    <Button size='3' variant = {props.variant}>
+    <Button size='3' variant = {props.variant} onClick={props.callBack}>
      <NextImage
       className="img_36px"
       src={props.iconNI}

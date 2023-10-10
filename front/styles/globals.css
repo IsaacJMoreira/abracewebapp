@@ -5,8 +5,6 @@
 @tailwind utilities;
 
 
-@import '@radix-ui/colors/black-alpha.css';
-@import '@radix-ui/colors/violet.css';
 
 
 /* IMAGE MODIFICATIONS */
@@ -30,24 +28,6 @@ body{
   width: 33vw;
 }
 
-
-
-.Header_div{
-  width: 100vw;
-  height: 48px;
-  padding: 5px;
-  background-color: transparent;
-  
-
-}
-.Footer_div{
-  width: 100vw;
-  height: fit-content;
-}
-.paws-background{
-  background-image: url('../public/assets/images/Frame\ 9.png');
-  background-size: auto;
-}
 
 
 /* POSITIONING  */

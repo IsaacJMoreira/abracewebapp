@@ -10,12 +10,12 @@ import { useEffect } from "react";
 const Home = () => {
   return (
     <section className="w-full flex-center fles-col main_background_color">
-      <Card className="w-screen h-fit relative top-[100vw]">
+      <Card variant="surface" className="w-screen h-fit relative top-[100vw]">
         <Flex align="center" direction="column" justify="between" gap="4">
           <Box>
             <Box className="h-[50vw]"></Box>
             <Text color= 'lime' align="center" size="9" weight="bold" as="div">
-              adote cães e gatos adultos
+              adoção de cães e gatos adultos
             </Text>
             <br />
             <Text align="center" size="5" weight="medium" as="div">
