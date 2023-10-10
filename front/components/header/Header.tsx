@@ -140,7 +140,7 @@ const Header = () => {
   const [userName, setUserName] = useState("");
   return (
     <div className="sticky bg-[#ffffffaa] top-0 block h-fit w-screen p-2 z-50 backdrop-blur ">
-      <Theme radius="full" >
+      
         <Flex align="center" justify="between">
           <Flex align="center" justify="between" gap="2">
             <Avatar
@@ -175,7 +175,7 @@ const Header = () => {
             />
           )}
         </Flex>
-      </Theme>
+     
     </div>
   );
 };
