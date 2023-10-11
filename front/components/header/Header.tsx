@@ -155,7 +155,7 @@ const Header = () => {
               }
               alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
             />
-            <Link  size="5" weight="bold" href="/home">
+            <Link  size="4" weight="bold" href="/home">
               ABRACE
             </Link>
           </Flex>

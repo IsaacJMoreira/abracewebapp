@@ -118,14 +118,9 @@ const AdoptionCard: FC<MyProps> = (props) => {
             gap="3"
             wrap="nowrap"
           >
-            <Flex
-              className="p-0 border rounded-md  border-lime-600 shadow-lime-900 shadow-md "
-              width="9"
-              height="8"
-              direction="column"
-              justify="between"
-              align="center"
-              gap="0"
+            <Card
+             variant="classic"
+             className="w-20 h-16"
             >
               <Text as="div" size="6" weight="bold" align="center">
                 {props.age}
@@ -139,16 +134,11 @@ const AdoptionCard: FC<MyProps> = (props) => {
               >
                 idade
               </Text>
-            </Flex>
+            </Card>
 
-            <Flex
-              className="p-0 border rounded-md  border-lime-600 shadow-lime-900 shadow-md "
-              width="9"
-              height="8"
-              direction="column"
-              justify="between"
-              align="center"
-              gap="0"
+            <Card
+             variant="classic"
+             className="w-20 h-16"
             >
               <Text as="div" size="6" weight="bold" align="center">
                 {props.sex ? "F" : "M"}
@@ -162,16 +152,11 @@ const AdoptionCard: FC<MyProps> = (props) => {
               >
                 sexo
               </Text>
-            </Flex>
+            </Card>
 
-            <Flex
-              className="p-0 border rounded-md  border-lime-600 shadow-lime-900 shadow-md "
-              width="9"
-              height="8"
-              direction="column"
-              justify="between"
-              align="center"
-              gap="0"
+            <Card
+             variant="classic"
+             className="w-20 h-16"
             >
               <Text as="div" size="3" weight="bold" align="center">
                 {props.furType}
@@ -185,16 +170,11 @@ const AdoptionCard: FC<MyProps> = (props) => {
               >
                 pelagem
               </Text>
-            </Flex>
+            </Card>
 
-            <Flex
-              className="p-0 border rounded-md  border-lime-600 shadow-lime-900 shadow-md "
-              width="9"
-              height="8"
-              direction="column"
-              justify="between"
-              align="center"
-              gap="0"
+            <Card
+             variant="classic"
+             className="w-20 h-16"
             >
               <Text as="div" size="3" weight="bold" align="center">
                 {props.color}
@@ -208,15 +188,10 @@ const AdoptionCard: FC<MyProps> = (props) => {
               >
                 cor
               </Text>
-            </Flex>
-            <Flex
-              className="p-0 border rounded-md  border-lime-600 shadow-lime-900 shadow-md "
-              width="9"
-              height="8"
-              direction="column"
-              justify="between"
-              align="center"
-              gap="0"
+            </Card>
+            <Card
+             variant="classic"
+             className="w-20 h-16"
             >
               <Text as="div" size="6" weight="bold" align="center">
                 {props.weight}
@@ -230,7 +205,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
               >
                 {props.weightUnity}
               </Text>
-            </Flex>
+            </Card>
           </Flex>
         </ScrollArea>
         <Text as="div" size="8" weight="bold" color="lime">
