@@ -1,24 +1,40 @@
 "use client";
-import { Card, Flex, Box, Text, Button, ScrollArea } from "@radix-ui/themes";
+import {
+  Card,
+  Flex,
+  Box,
+  Text,
+  Button,
+  ScrollArea,
+  Inset,
+} from "@radix-ui/themes";
 import NextImage from "next/image";
 import FrontDog from "../../public/assets/images/FrontDog.png";
 import STDButton from "@components/stdButton/STDButton";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
 import { useEffect } from "react";
+import Link from "next/link";
 
 const Home = () => {
   return (
-    <ScrollArea type="always" scrollbars="vertical" style={{height: 'fit-content'}}>
-      <NextImage
-        className="w-screen"
-        src={FrontDog}
-        alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
-      />
-      <Card className="w-screen -top-[52vw] -z-10">
+    // <ScrollArea
+    //   type="always"
+    //   scrollbars="vertical"
+    //   style={{ height: "fit-content" }}
+    // >
+    <div>
+      <Card className="w-screen ">
+        <Inset>
+          <NextImage
+            className="w-screen z-50"
+            src={FrontDog}
+            alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
+          />
+        </Inset>
+
         <Flex align="center" direction="column" justify="between" gap="4">
           <Box>
-            <Box className="h-[50vw]"></Box>
             <Text color="lime" align="center" size="9" weight="bold" as="div">
               adoção de cães e gatos adultos
             </Text>
@@ -30,11 +46,11 @@ const Home = () => {
             </Text>
             <br />
             <Flex align="center" direction="column" justify="between" gap="4">
-              <Box>
+              <Link href="/adoption">
                 <Button style={{ width: "75vw" }} size="3">
                   ADOTAR
                 </Button>
-              </Box>
+              </Link>
             </Flex>
             <br />
             <Flex align="center" direction="column" justify="between" gap="4">
@@ -58,7 +74,7 @@ const Home = () => {
         </Flex>
         <br />
       </Card>
-    </ScrollArea>
+    </div>
   );
 };
 

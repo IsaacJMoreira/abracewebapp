@@ -10,12 +10,8 @@ import AdoptionCard from "@components/AdoptionCard/AdoptionCard";
 
 const Adoption = () => {
   return (
-    <ScrollArea
-      type="always"
-      scrollbars="vertical"
-      
-    >
-      <Flex direction="column" justify='between' gap='3' >
+    <ScrollArea type="always" scrollbars="vertical" size='2'>
+      <Flex width='100%' direction="row" align='center' justify="center" gap="4" wrap='wrap'>
         <AdoptionCard
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
@@ -23,6 +19,18 @@ const Adoption = () => {
           age={12}
           color="preto"
           furType="longo"
+          weight={10}
+          weightUnity="Kg"
+        />
+        <AdoptionCard
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+          ALT="LHÇH"
+          sex={false}
+          age={5}
+          color="preto"
+          furType="longo"
+          weight={500}
+          weightUnity="g"
         />
         <AdoptionCard
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
@@ -31,6 +39,8 @@ const Adoption = () => {
           age={12}
           color="preto"
           furType="longo"
+          weight={10}
+          weightUnity="Kg"
         />
         <AdoptionCard
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
@@ -39,6 +49,58 @@ const Adoption = () => {
           age={12}
           color="preto"
           furType="longo"
+          weight={10}
+          weightUnity="Kg"
+        />
+        <AdoptionCard
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+          ALT="LHÇH"
+          sex={true}
+          age={12}
+          color="preto"
+          furType="longo"
+          weight={10}
+          weightUnity="Kg"
+        />
+        <AdoptionCard
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+          ALT="LHÇH"
+          sex={true}
+          age={12}
+          color="preto"
+          furType="longo"
+          weight={10}
+          weightUnity="Kg"
+        />
+        <AdoptionCard
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+          ALT="LHÇH"
+          sex={true}
+          age={12}
+          color="preto"
+          furType="longo"
+          weight={10}
+          weightUnity="Kg"
+        />
+        <AdoptionCard
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+          ALT="LHÇH"
+          sex={true}
+          age={12}
+          color="preto"
+          furType="longo"
+          weight={10}
+          weightUnity="Kg"
+        />
+        <AdoptionCard
+          URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+          ALT="LHÇH"
+          sex={true}
+          age={12}
+          color="preto"
+          furType="longo"
+          weight={10}
+          weightUnity="Kg"
         />
       </Flex>
     </ScrollArea>

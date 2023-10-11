@@ -6,7 +6,7 @@ import { Theme } from "@radix-ui/themes";
 import Header from "../components/header/Header";
 
 
-const darkMode = "inherit";
+const darkMode = "light";
 
 export const metadata = {
   title: "ABRACE",

@@ -9,6 +9,7 @@ import {
   Box,
   Separator,
   TextField,
+  Link,
 } from "@radix-ui/themes";
 
 import {
@@ -23,7 +24,7 @@ import NextImage from "next/image";
 import STDButton from "@components/stdButton/STDButton";
 import WhoArU from "../../public/assets/icons/53324372.png";
 import Hi from "../../public/assets/icons/74dec39f3bdda7417bb318f5b98afe3e 1.png";
-import { useState, useEffect, ReactNode, FC } from "react";
+import { useState, useEffect, ReactNode, FC, } from "react";
 import { prototype } from "events";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import React from "react";
@@ -154,9 +155,9 @@ const Header = () => {
               }
               alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
             />
-            <Text as="div" size="5" weight="bold" align="center">
+            <Link  size="5" weight="bold" href="/home">
               ABRACE
-            </Text>
+            </Link>
           </Flex>
 
           {!loggedIn ? (
