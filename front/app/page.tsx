@@ -25,7 +25,7 @@ const Home = () => {
     // >
     <div>
       <Card className="w-screen ">
-        <Inset>
+        <Inset clip="padding-box" side="top" pb="current">
           <NextImage
             className="w-screen z-50"
             src={FrontDog}

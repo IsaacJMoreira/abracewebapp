@@ -2,7 +2,7 @@
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
 import { Card, Flex, Text, Button, Inset, IconButton } from "@radix-ui/themes";
 import NextImage from "next/image";
-import FrontDog from "../../public/assets/images/FrontDog.png";
+import DogSnout from "../../public/assets/images/DogSnout.jpg";
 import STDButton from "@components/stdButton/STDButton";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
 import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
@@ -21,10 +21,10 @@ const Home = () => {
     // >
     <div>
       <Card className="w-screen ">
-        <Inset>
+        <Inset clip="padding-box" side="top" pb="current">
           <NextImage
-            className="w-screen z-50"
-            src={FrontDog}
+            className="w-screen"
+            src={DogSnout}
             alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
           />
         </Inset>
