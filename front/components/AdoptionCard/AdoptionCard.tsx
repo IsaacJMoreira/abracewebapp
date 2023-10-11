@@ -53,7 +53,7 @@ const Disclaimer = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button variant="solid">ADOTAR</Button>
+        <Button variant="surface">ADOTAR</Button>
       </Dialog.Trigger>
 
       <Dialog.Content>
@@ -82,7 +82,7 @@ const Disclaimer = () => {
                 </Button>
               </Dialog.Close>
               <Dialog.Close>
-                <Button variant="solid">
+                <Button variant="surface">
                   <HeartFilledIcon width="18" height="18" />
                   sim, adotar
                 </Button>
