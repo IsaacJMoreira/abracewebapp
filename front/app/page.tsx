@@ -9,10 +9,10 @@ import {
   Inset,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
-import FrontDog from "../../public/assets/images/FrontDog.png";
+import FrontDog from "../public/assets/images/FrontDog.png";
 import STDButton from "@components/stdButton/STDButton";
-import DONATEIcon from "../../public/assets/icons/2904845 1.png";
-import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
+import DONATEIcon from "../public/assets/icons/2904845 1.png";
+import VOLUNTEERIcon from "../public/assets/icons/volunteer-icon-10 1.png";
 import { useEffect } from "react";
 import Link from "next/link";
 
@@ -47,7 +47,7 @@ const Home = () => {
             <br />
             <Flex align="center" direction="column" justify="between" gap="4">
               <Link href="/adoption">
-                <Button style={{ width: "75vw" }} size="3">
+                <Button style={{ width: "75vw", maxWidth: 340 }} size="3">
                   ADOTAR
                 </Button>
               </Link>
@@ -58,11 +58,13 @@ const Home = () => {
                 você também pode ajudar essa causa animal
               </Text>
               <Flex align="center" direction="row" justify="between" gap="4">
+              <Link href="/help">
                 <STDButton
                   iconAlt="Doe"
                   iconNI={DONATEIcon}
                   text="quero doar"
                 />
+              </Link>
                 <STDButton
                   iconAlt="vountariar"
                   iconNI={VOLUNTEERIcon}

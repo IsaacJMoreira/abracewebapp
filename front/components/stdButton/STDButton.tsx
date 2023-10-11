@@ -16,7 +16,7 @@ const STDButton: FC<MyProps> = (props) => {
   return (
     <Button size='3' variant = {props.variant} onClick={props.callBack}>
      <NextImage
-      className="img_36px"
+      className=" w-7"
       src={props.iconNI}
       alt={props.iconAlt}
       />

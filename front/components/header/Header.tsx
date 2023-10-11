@@ -21,11 +21,11 @@ import {
   LockClosedIcon,
 } from "@radix-ui/react-icons";
 import NextImage from "next/image";
-import STDButton from "@components/stdButton/STDButton";
+
 import WhoArU from "../../public/assets/icons/53324372.png";
 import Hi from "../../public/assets/icons/74dec39f3bdda7417bb318f5b98afe3e 1.png";
-import { useState, useEffect, ReactNode, FC, } from "react";
-import { prototype } from "events";
+import { useState, ReactNode, FC, } from "react";
+
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import React from "react";
 
@@ -155,7 +155,7 @@ const Header = () => {
               }
               alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
             />
-            <Link  size="4" weight="bold" href="/home">
+            <Link  size='4' weight="bold" href="/">
               ABRACE
             </Link>
           </Flex>

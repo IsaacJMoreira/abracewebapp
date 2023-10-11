@@ -35,6 +35,7 @@ interface IMGProps {
 
 interface MyProps {
   children?: ReactNode;
+  name: string
   imgUrls?: [IMGProps];
   URL: string;
   ALT: string;
@@ -99,7 +100,7 @@ const Disclaimer = () => {
 
 const AdoptionCard: FC<MyProps> = (props) => {
   return (
-    <Card className="max-w-sm" variant="surface">
+    <Card className="max-w-sm " variant="surface">
       <Inset clip="padding-box" side="top" pb="current">
         <NextImage width="384" height="100" src={props.URL} alt={props.ALT} />
       </Inset>
@@ -132,7 +133,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
                 align="center"
                 color="lime"
               >
-                idade
+                {props.ageUnity}
               </Text>
             </Card>
 
@@ -209,7 +210,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
           </Flex>
         </ScrollArea>
         <Text as="div" size="8" weight="bold" color="lime">
-          THOMAS
+          {props.name}
         </Text>
         <Text as="div" size="3">
           Cãozinho de 3 anos com pelo longo, temperamento calmo e 30kg, está

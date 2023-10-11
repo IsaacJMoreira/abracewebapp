@@ -13,6 +13,7 @@ const Adoption = () => {
     <ScrollArea type="always" scrollbars="vertical" size='2'>
       <Flex width='100%' direction="row" align='center' justify="center" gap="4" wrap='wrap'>
         <AdoptionCard
+         name="Clara"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -21,8 +22,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={false}
@@ -31,8 +34,10 @@ const Adoption = () => {
           furType="longo"
           weight={500}
           weightUnity="g"
+          ageUnity="meses"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -41,8 +46,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -51,8 +58,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -61,8 +70,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -71,8 +82,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -81,8 +94,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -91,8 +106,10 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
         <AdoptionCard
+        name="Thomas"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
           ALT="LHÇH"
           sex={true}
@@ -101,6 +118,7 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
+          ageUnity="anos"
         />
       </Flex>
     </ScrollArea>
