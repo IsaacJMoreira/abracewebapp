@@ -46,6 +46,7 @@ const Adoption = () => {
         </Flex>
       </Flex>
       <Flex
+        className="py-2"
         width="100%"
         direction="row"
         align="center"
