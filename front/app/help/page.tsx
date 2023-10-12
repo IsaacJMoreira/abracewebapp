@@ -9,7 +9,7 @@ import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
 import CalendarIcon from "../../public/assets/icons/42253 1.png";
 import DogBowIcon from "../../public/assets/icons/3822004 1.png";
 import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
-import PetADogIcon from '../../public/assets/icons/pet-dog.png'
+import PetADogIcon from "../../public/assets/icons/pet-dog.png";
 import Link from "next/link";
 
 const Home = () => {
@@ -35,12 +35,13 @@ const Home = () => {
               <Text align="center" size="5" weight="bold" as="div" color="lime">
                 você pode nos ajudar de várias maneiras
               </Text>
-              <STDButton
-                iconAlt="pix copia e cola"
-                iconNI={PIXIcon}
-                text="PIX copia e cola"
-              />
-
+              <Link href="/pix">
+                <STDButton
+                  iconAlt="pix copia e cola"
+                  iconNI={PIXIcon}
+                  text="PIX copia e cola"
+                />
+              </Link>
               <STDButton
                 iconAlt="seja mensalista"
                 iconNI={CalendarIcon}
@@ -55,18 +56,18 @@ const Home = () => {
                 iconAlt="doe alimentos"
                 iconNI={DogBowIcon}
                 text="doe alimentos"
-              />  
-               <STDButton
+              />
+              <STDButton
                 iconAlt="apadrinhar"
                 iconNI={PetADogIcon}
                 text="apadrinhar"
-              />            
+              />
               <STDButton
                 iconAlt="vountariar"
                 iconNI={VOLUNTEERIcon}
                 text="voluntariar"
               />
-              <Text align="center" size="1" weight="bold" as="div" >
+              <Text align="center" size="1" weight="bold" as="div">
                 entre em contato conosco através das nossas redes
               </Text>
               <IconButton>
@@ -76,7 +77,7 @@ const Home = () => {
           </Card>
 
           <Flex align="center" direction="column" justify="between" gap="4">
-            <Text align="center" size="1" weight="bold" as="div" >
+            <Text align="center" size="1" weight="bold" as="div">
               temos vários amiguinhos esperando um novo lar. <br /> Vamos
               conhecê-los?
             </Text>
