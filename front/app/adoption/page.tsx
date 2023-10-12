@@ -41,7 +41,7 @@ const Adoption = () => {
             seu melhor amigo está aqui
           </Text>
 
-          <div  className="p-2 h-fit w-30">
+          
             <Flex gap="2" direction="row" justify="between" align='center'>
               <Separator orientation="vertical" size="3" />
               <Flex gap="1" direction="column" align="center">
@@ -53,7 +53,7 @@ const Adoption = () => {
                 <Switch defaultChecked />
               </Flex>
             </Flex>
-          </div>
+          
         </Flex>
 
         <AdoptionCard
