@@ -108,7 +108,7 @@ const Disclaimer = () => {
               </Flex>
 
               <Text as="div" align="center" size="3" weight="medium">
-                parece que foi amor à primeira vista!
+                foi amor à primeira vista?
               </Text>
 
               <Dialog.Close>
