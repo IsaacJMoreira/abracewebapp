@@ -21,6 +21,7 @@ import {
   LockClosedIcon,
 } from "@radix-ui/react-icons";
 import NextImage from "next/image";
+import ABRACE from '../../public/assets/images/ABRACE.png'
 
 import WhoArU from "../../public/assets/icons/53324372.png";
 import Hi from "../../public/assets/icons/74dec39f3bdda7417bb318f5b98afe3e 1.png";
@@ -144,7 +145,14 @@ const Header = () => {
       
         <Flex align="center" justify="between">
           <Flex align="center" justify="between" gap="2">
-            <Avatar
+            <Link href='/'>
+            <NextImage
+            className="w-16 h-16"
+            alt='Logo da ABRACE'
+            src={ABRACE}/>
+            </Link>
+            
+            {/* <Avatar
               size="5"
               radius="full"
               fallback="AB"
@@ -154,10 +162,10 @@ const Header = () => {
                   : ""
               }
               alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
-            />
-            <Link  size='4' weight="bold" href="/">
+            /> */}
+            {/* <Link  size='4' weight="bold" href="/">
               ABRACE
-            </Link>
+            </Link> */}
           </Flex>
 
           {!loggedIn ? (

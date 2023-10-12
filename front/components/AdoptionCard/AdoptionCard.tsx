@@ -10,12 +10,13 @@ import {
   Dialog,
   Separator,
   TextField,
+  Link,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
 import FrontDog from "../public/assets/images/FrontDog.png";
 import STDButton from "@components/stdButton/STDButton";
-import DONATEIcon from "../public/assets/icons/2904845 1.png";
-import VOLUNTEERIcon from "../public/assets/icons/volunteer-icon-10 1.png";
+import DONATEIcon from "../../public/assets/icons/2904845 1.png";
+import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
 import { FC, ReactNode, useEffect } from "react";
 import React from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -35,7 +36,7 @@ interface IMGProps {
 
 interface MyProps {
   children?: ReactNode;
-  name: string
+  name: string;
   imgUrls?: [IMGProps];
   URL: string;
   ALT: string;
@@ -58,39 +59,65 @@ const Disclaimer = () => {
       </Dialog.Trigger>
 
       <Dialog.Content>
-        <Dialog.Title>Atenção</Dialog.Title>
+        <Dialog.Title size="6">Atenção</Dialog.Title>
 
         <Flex direction="column" justify="between" gap="3">
           <Flex direction="column" gap="3">
-            <Text as="div">
-              Adotar um cão ou gato é uma decisão maravilhosa, mas exige
-              responsabilidade. Além dos custos financeiros, que incluem
-              alimentação, cuidados veterinários e emergências, é preciso
-              disponibilizar tempo, espaço e paciência para os animais. A adoção
-              representa um compromisso de longo prazo, com a necessidade de
-              adaptação e consideração da personalidade do pet. Apesar dos
-              desafios, a recompensa é o amor incondicional que esses amigos de
-              quatro patas proporcionam. Portanto, a adoção deve ser feita com
-              sabedoria e responsabilidade, assegurando que você está pronto
-              para fazer a diferença na vida de um animalzinho.
+            <Text as="div" size="2">
+              Adotar um cão ou gato é uma decisão significativa que requer
+              <strong> responsabilidade</strong>. Além dos aspectos financeiros,
+              como alimentação e cuidados veterinários, é essencial dispor de
+              tempo, espaço e paciência para os animais.
+              <br />A adoção representa um
+              <strong> compromisso</strong> de longo prazo, demandando adaptação
+              à personalidade do pet.
+              <br /> Embora venham desafios, a recompensa é o amor incondicional
+              oferecido por esses companheiros de quatro patas.
+              <br />
+              Portanto, a adoção deve ser uma escolha ponderada e{" "}
+              <strong> responsável</strong>, garantindo que você está pronto
+              para fazer a diferença na vida de um animal de estimação.
             </Text>
-            <Flex direction='row' justify='between' align='center' gap='3'>
-            
+            <Flex direction="column" justify="between" align="center" gap="3">
+              <Text as="div" align="center" size="3" weight="medium">
+                ainda não tem certeza?
+              </Text>
+              <Flex align="center" direction="row" justify="between" gap="4">
+                <Dialog.Close>
+                  <Button variant="surface">
+                    <ChevronLeftIcon width="18" height="18" />
+                    voltar
+                  </Button>
+                </Dialog.Close>
+                <Link href="/help">
+                  <Button variant="surface">
+                    <NextImage className=" w-7" alt="Doe" src={DONATEIcon} />
+                    doar
+                  </Button>
+                </Link>
+                <Link href="/help">
+                  <Button variant="surface">
+                    <NextImage
+                      className=" w-7"
+                      alt="voluntariar"
+                      src={VOLUNTEERIcon}
+                    />
+                    voluntariar
+                  </Button>
+                </Link>
+              </Flex>
+
+              <Text as="div" align="center" size="3" weight="medium">
+                parece que foi amor à primeira vista!
+              </Text>
+
               <Dialog.Close>
-                <Button variant="surface">
-                  <ChevronLeftIcon width="18" height="18" />
-                  voltar
-                </Button>
-              </Dialog.Close>
-              <Dialog.Close>
-                <Button variant="surface">
+                <Button variant="surface" className="w-32">
                   <HeartFilledIcon width="18" height="18" />
                   sim, adotar
                 </Button>
               </Dialog.Close>
-            
             </Flex>
-            
           </Flex>
         </Flex>
       </Dialog.Content>
@@ -119,10 +146,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
             gap="3"
             wrap="nowrap"
           >
-            <Card
-             variant="classic"
-             className="w-20 h-16"
-            >
+            <Card variant="classic" className="w-20 h-16">
               <Text as="div" size="6" weight="bold" align="center">
                 {props.age}
               </Text>
@@ -137,10 +161,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
               </Text>
             </Card>
 
-            <Card
-             variant="classic"
-             className="w-20 h-16"
-            >
+            <Card variant="classic" className="w-20 h-16">
               <Text as="div" size="6" weight="bold" align="center">
                 {props.sex ? "F" : "M"}
               </Text>
@@ -155,10 +176,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
               </Text>
             </Card>
 
-            <Card
-             variant="classic"
-             className="w-20 h-16"
-            >
+            <Card variant="classic" className="w-20 h-16">
               <Text as="div" size="3" weight="bold" align="center">
                 {props.furType}
               </Text>
@@ -173,10 +191,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
               </Text>
             </Card>
 
-            <Card
-             variant="classic"
-             className="w-20 h-16"
-            >
+            <Card variant="classic" className="w-20 h-16">
               <Text as="div" size="3" weight="bold" align="center">
                 {props.color}
               </Text>
@@ -190,10 +205,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
                 cor
               </Text>
             </Card>
-            <Card
-             variant="classic"
-             className="w-20 h-16"
-            >
+            <Card variant="classic" className="w-20 h-16">
               <Text as="div" size="6" weight="bold" align="center">
                 {props.weight}
               </Text>
