@@ -37,12 +37,12 @@ const Adoption = () => {
           align="center"
           className="sticky px-4 py-0 top-20 block w-screen bg-[#96D2792f] backdrop-blur-sm z-50 "
         >
-          <Text as="div" weight="bold" align="left" color="lime">
-            seu melhor amigo está aqui
-          </Text>
-
           
-            <Flex gap="2" direction="row" justify="between" align='center'>
+            <Text as="div" weight="bold" align="left" color="lime">
+              seu melhor amigo está aqui
+            </Text>
+            
+            <Flex gap="2" direction="row" justify="between" align="center">
               <Separator orientation="vertical" size="3" />
               <Flex gap="1" direction="column" align="center">
                 <NextImage className="h-5 w-5" src={DogIcon} alt="Dog" />
