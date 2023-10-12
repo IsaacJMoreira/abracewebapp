@@ -29,7 +29,7 @@ const Adoption = () => {
         align="center"
         className="sticky px-4 py-0 top-20 bg-[#96D2792f] backdrop-blur-sm z-50 "
       >
-        <Text as="div" weight="bold" align="left" color="lime" size='2' className="w-fit">
+        <Text as="div" weight="bold" align="left" color="lime" size='4' className="w-fit">
           seu melhor amigo está aqui
         </Text>
 
