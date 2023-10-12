@@ -22,26 +22,18 @@ import AdoptionCard from "@components/AdoptionCard/AdoptionCard";
 const Adoption = () => {
   return (
     <div>
-      <Flex
-        width="100%"
-        direction="row"
-        align="center"
-        justify="center"
-        gap="4"
-        wrap="wrap"
-      >
-        <Flex
+       <Flex
           direction="row"
           justify="between"
-          gap="0"
+          gap="3"
           align="center"
-          className="sticky px-4 py-0 top-20 block w-screen bg-[#96D2792f] backdrop-blur-sm z-50 "
+          className="sticky px-4 py-0 top-20 block bg-[#96D2792f] backdrop-blur-sm z-50 "
         >
           
             <Text as="div" weight="bold" align="left" color="lime">
               seu melhor amigo está aqui
             </Text>
-            
+
             <Flex gap="2" direction="row" justify="between" align="center">
               <Separator orientation="vertical" size="3" />
               <Flex gap="1" direction="column" align="center">
@@ -55,6 +47,15 @@ const Adoption = () => {
             </Flex>
           
         </Flex>
+      <Flex
+        width="100%"
+        direction="row"
+        align="center"
+        justify="center"
+        gap="4"
+        wrap="wrap"
+      >
+       
 
         <AdoptionCard
           name="Clara"
