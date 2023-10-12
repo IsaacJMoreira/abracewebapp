@@ -22,31 +22,29 @@ import AdoptionCard from "@components/AdoptionCard/AdoptionCard";
 const Adoption = () => {
   return (
     <div>
-       <Flex
-          direction="row"
-          justify="between"
-          gap="3"
-          align="center"
-          className="sticky px-4 py-0 top-20 block bg-[#96D2792f] backdrop-blur-sm z-50 "
-        >
-          
-            <Text as="div" weight="bold" align="left" color="lime">
-              seu melhor amigo está aqui
-            </Text>
+      <Flex
+        direction="row"
+        justify="between"
+        gap="3"
+        align="center"
+        className="sticky px-4 py-0 top-20 bg-[#96D2792f] backdrop-blur-sm z-50 "
+      >
+        <Text as="div" weight="bold" align="left" color="lime" size='2' className="w-fit">
+          seu melhor amigo está aqui
+        </Text>
 
-            <Flex gap="2" direction="row" justify="between" align="center">
-              <Separator orientation="vertical" size="3" />
-              <Flex gap="1" direction="column" align="center">
-                <NextImage className="h-5 w-5" src={DogIcon} alt="Dog" />
-                <Switch defaultChecked />
-              </Flex>
-              <Flex gap="1" direction="column" align="center">
-                <NextImage className="h-5 w-5" src={CatIcon} alt="Dog" />
-                <Switch defaultChecked />
-              </Flex>
-            </Flex>
-          
+        <Flex gap="2" direction="row" justify="between" align="center" className="w-fit">
+          <Separator orientation="vertical" size="3" />
+          <Flex gap="1" direction="column" align="center">
+            <NextImage className="h-5 w-5" src={DogIcon} alt="Dog" />
+            <Switch defaultChecked />
+          </Flex>
+          <Flex gap="1" direction="column" align="center">
+            <NextImage className="h-5 w-5" src={CatIcon} alt="Dog" />
+            <Switch defaultChecked />
+          </Flex>
         </Flex>
+      </Flex>
       <Flex
         width="100%"
         direction="row"
@@ -55,8 +53,6 @@ const Adoption = () => {
         gap="4"
         wrap="wrap"
       >
-       
-
         <AdoptionCard
           name="Clara"
           URL="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
