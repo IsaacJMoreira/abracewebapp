@@ -30,13 +30,13 @@ const Adoption = () => {
         gap="4"
         wrap="wrap"
       >
-        <Flex direction='row' justify='between' gap='2'align='center' className="sticky px-4 py-0 top-20 block h-fit w-screen bg-[#96D2792f] backdrop-blur-sm z-50 ">
-          <Text as='div' size='4' weight='bold' align='left' color="lime">seu melhor amigo está aqui</Text>
+        <Flex direction='row' justify='between' gap='2'align='center' className="sticky px-4 py-0 top-20 block w-screen bg-[#96D2792f] backdrop-blur-sm z-50 ">
+          <Text as='div' weight='bold' align='left' color="lime">seu melhor amigo está aqui</Text>
           <Separator orientation="vertical" size='3'/>
           <Card variant="ghost" className="p-3" >
             <Flex direction='column' gap='2' >
             
-            <Flex gap='3' direction='row' justify='between'>
+            <Flex gap='1' direction='row' justify='between'>
               <Flex gap="2" direction="column" align="center">
                 <NextImage className="h-5 w-5" src={DogIcon} alt="Dog" />
                 <Switch defaultChecked />
