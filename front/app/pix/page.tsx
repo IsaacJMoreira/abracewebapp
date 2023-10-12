@@ -55,12 +55,12 @@ const Home = () => {
               {!pix ? (
                 ""
               ) : (
-                <>
+                <Card variant="classic">
                   
                   <NextImage src={PixIMG} alt="mock pix" />
-                  <Text  as="div" size='1' align='center'> aponte a câmera do seu smartphone ou copie a chave abaixo</Text>
+                  <Text  as="div" size='1'  align='center' color='lime'> aponte a câmera do seu smartphone ou copie a chave abaixo</Text>
                   
-                  <Card>
+                  <Card >
                     <Flex direction="row" gap="1" justify="between">
                     <CopyIcon width="16" height="16" />
                     <Separator orientation="vertical" size='1'/>
@@ -72,7 +72,7 @@ const Home = () => {
                     </Flex>
                   </Card>
                   <Text as='div' size='4' color='tomato' align='center'>QR-CODE E CHAVE MERAMENTE ILUSTRATIVOS</Text>
-                </>
+                </Card>
               )}
 
               <TextField.Root>
