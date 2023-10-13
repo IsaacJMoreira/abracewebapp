@@ -42,11 +42,13 @@ const Home = () => {
                   text="PIX copia e cola"
                 />
               </Link>
-              <STDButton
-                iconAlt="seja mensalista"
-                iconNI={CalendarIcon}
-                text="seja mensalista"
-              />
+              <Link href="/subscription">
+                <STDButton
+                  iconAlt="seja mensalista"
+                  iconNI={CalendarIcon}
+                  text="seja mensalista"
+                />
+              </Link>
               <STDButton
                 iconAlt="lar temporário"
                 iconNI={TemporaryHomeIcon}
