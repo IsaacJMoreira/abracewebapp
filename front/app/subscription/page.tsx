@@ -12,11 +12,10 @@ import {
   Select,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
-import DogLick from "../../public/assets/images/dogLick.jpg";
+import CatAndDog from "../../public/assets/images/catAndDog.jpg";
 import CalendarIcon from "../../public/assets/icons/42253 1.png";
 import STDButton from "@components/stdButton/STDButton";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
-import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
 import Link from "next/link";
 import { useState } from "react";
@@ -32,7 +31,7 @@ const Home = () => {
         <Inset clip="padding-box" side="top" pb="current">
           <NextImage
             className="w-screen"
-            src={DogLick}
+            src={CatAndDog}
             alt="Filhote de cachorro de pelo marrom lambendo a tela"
           />
         </Inset>
@@ -111,6 +110,7 @@ const Home = () => {
                         <Link href="/subscription">
                           Clique aqui para proceder com o pagamento{" "}
                         </Link>
+                        <Text as='div' color="tomato" align='center'>LINK MERAMENTE ILUSTRATIVO</Text>
                       </Text>
                     </Flex>
                   </Card>
