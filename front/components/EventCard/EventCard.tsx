@@ -2,32 +2,21 @@
 import {
   Card,
   Flex,
-  Box,
   Text,
   Button,
   ScrollArea,
   Inset,
   Dialog,
-  Separator,
-  TextField,
   Link,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
-import FrontDog from "../public/assets/images/FrontDog.png";
-import STDButton from "@components/stdButton/STDButton";
+
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
-import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
+
 import { FC, ReactNode, useEffect } from "react";
 import React from "react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import {
-  CheckIcon,
-  ChevronLeftIcon,
-  Cross1Icon,
-  HeartFilledIcon,
-  LockClosedIcon,
-  PersonIcon,
-} from "@radix-ui/react-icons";
+
+import { ChevronLeftIcon, HeartFilledIcon } from "@radix-ui/react-icons";
 
 interface IMGProps {
   URL?: string;
@@ -65,17 +54,18 @@ const Disclaimer = () => {
               principalmente quando se trata de voluntariado em uma organização
               como a ONG ABRACE, que despende esforços incansáveis para
               encontrar lares amorosos para animais de estimação abandonados.
-              <br/>Cada pessoa que se dispõe a doar seu tempo e esforço desempenha um
+              <br />
+              Cada pessoa que se dispõe a doar seu tempo e esforço desempenha um
               papel crucial na realização dessa nobre missão. Ao cumprir um
               compromisso marcado, você não apenas demonstra respeito pelos
               coordenadores e colegas voluntários, mas também contribui para o
-              bem-estar dos animais que dependem dessa ajuda. <br/>No entanto,
-              compreendemos que imprevistos podem ocorrer, e é por isso que
-              pedimos a todos os voluntários que, caso precisem desistir da
-              presença em um compromisso, nos avisem com pelo menos 24 horas de
-              antecedência, permitindo-nos ajustar nossa programação e garantir
-              que nossos resgates e cuidados aos animais continuem de forma
-              eficaz e organizada. Cada esforço conjunto é valioso na luta
+              bem-estar dos animais que dependem dessa ajuda. <br />
+              No entanto, compreendemos que imprevistos podem ocorrer, e é por
+              isso que pedimos a todos os voluntários que, caso precisem
+              desistir da presença em um compromisso, nos avisem com pelo menos
+              24 horas de antecedência, permitindo-nos ajustar nossa programação
+              e garantir que nossos resgates e cuidados aos animais continuem de
+              forma eficaz e organizada. Cada esforço conjunto é valioso na luta
               contra o abandono de animais de estimação, e sua dedicação faz a
               diferença.
             </Text>
@@ -96,10 +86,7 @@ const Disclaimer = () => {
                     doar
                   </Button>
                 </Link>
-               
               </Flex>
-
-              
 
               <Dialog.Close>
                 <Button variant="surface" className="w-32">
@@ -136,10 +123,6 @@ const EventCard: FC<MyProps> = (props) => {
             gap="3"
             wrap="nowrap"
           >
-            
-
-            
-
             <Card variant="classic" className="w-20 h-16">
               <Text as="div" size="3" weight="bold" align="center">
                 {props.date}
