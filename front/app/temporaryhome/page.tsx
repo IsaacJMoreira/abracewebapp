@@ -1,9 +1,5 @@
 "use client";
-import {
-  InstagramLogoIcon,
-  HeartFilledIcon,
-  CopyIcon,
-} from "@radix-ui/react-icons";
+import { InstagramLogoIcon, Link1Icon } from "@radix-ui/react-icons";
 import {
   Card,
   Flex,
@@ -13,15 +9,13 @@ import {
   IconButton,
   TextField,
   Separator,
-  Blockquote,
-  Heading,
+  Select,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
-import CatEating from "../../public/assets/images/catEating.jpg";
-import DogBowIcon from "../../public/assets/icons/3822004 1.png";
+import DogHug from "../../public/assets/images/dogHug.jpg";
+import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
 import STDButton from "@components/stdButton/STDButton";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
-import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
 import Link from "next/link";
 import { useState } from "react";
@@ -29,14 +23,15 @@ import { useState } from "react";
 const totalPets = "30";
 
 const Home = () => {
-  const [donate, setDonate] = useState(false);
+  const [subscription, setSubscription] = useState(false);
+  const [plano, setPlano] = useState("");
   return (
     <div>
       <Card className="w-screen ">
         <Inset clip="padding-box" side="top" pb="current">
           <NextImage
             className="w-screen"
-            src={CatEating}
+            src={DogHug}
             alt="Filhote de cachorro de pelo marrom lambendo a tela"
           />
         </Inset>
@@ -44,48 +39,32 @@ const Home = () => {
         <Flex align="center" direction="column" justify="between" gap="4">
           <Card className="w-11/12">
             <Flex align="center" direction="column" justify="between" gap="4">
-              <Text align="center" size="4" weight="bold" as="div" color="lime">
-                graças à sua doação, você estará ajudando {totalPets} animais
-                cadastrados na ABRACE
-              </Text>
+             
 
-              {donate ? (
-                <Card>
-                  <Flex direction='column' align='center' justify='between' gap='1'>
-                  <Text as="div" size="3">
-                  <Heading size='6' color="lime"> Pontos de coleta</Heading>
-                  </Text>
-                  <Text as="div" size="3" color="tomato">
-                    ESSAS INFORMAÇÕES SÓ APARECEM PARA CADASTRADOS, GARANTINDO
-                    QUE OS ENDEREÇOS PERMANEÇAM SEGUROS.
-                  </Text>
-                  <Link href="https://maps.app.goo.gl/1Ez9buAAhY1mRpD39">
-                    <Blockquote>
-                      <Heading size='5' color="lime"> ENDEREÇO 1</Heading>
-                      <Heading size="2"> CASA DA Cris</Heading>
-                      RUA FULANO DE TAL, NUMERO 123, FORTALEZA -CE
-                    </Blockquote>
-                  </Link>
-                  <Link href="https://maps.app.goo.gl/1Ez9buAAhY1mRpD39">
-                    <Blockquote>
-                    <Heading size='5' color="lime"> ENDEREÇO 2</Heading>
-                      <Heading size="2"> CASA DA Cynthia</Heading>
-                      RUA FULANO DE ACOLÁ, NUMERO 321, FORTALEZA -CE
-                    </Blockquote>
-                  </Link>
-                  </Flex>
-                 
-                </Card>
-              ) : (
-                ""
-              )}
+             
+                  <Text as='div' size='3' weight='bold' align='center' color="lime"> INSCREVA-SE NO NOSSO PROGRAMA DE LAR TEMPORÁRIO</Text>
+                <Text as="div" size='1' align='center'>
+                Dar lar temporário a um animal abandonado é uma responsabilidade
+                que implica cuidados físicos e emocionais, exigindo tempo e
+                dedicação. É uma oportunidade de transformar a vida de um ser
+                indefeso, proporcionando amor, cuidado e paciência. Além disso,
+                desempenha um papel fundamental na luta contra o abandono de
+                animais, inspirando outros a adotarem e mostrando que todos
+                merecem uma segunda chance. É um ato de compaixão e empatia que
+                recompensa tanto o animal quanto o cuidador.
+              </Text>
+              <Text as='div' color="tomato">AQUI DEVE ESTAR A POLÍTICA DE ADOÇÃO</Text>
 
               <STDButton
-                iconAlt="Como doar?"
-                iconNI={DogBowIcon}
-                text="onde posso doar?"
-                callBack={setDonate}
+                iconAlt="gerar pix"
+                iconNI={TemporaryHomeIcon}
+                text="quero me inscrever"
+                callBack={()=>alert("Inscrição no programa 'LAR TEMPORÁRIO' enviada")}
               />
+
+             
+
+            
               <Flex align="center" direction="column" justify="between" gap="4">
                 <Text align="center" size="3" weight="medium" as="div">
                   continue nos ajudando
