@@ -31,8 +31,8 @@ interface MyProps {
   duration: string;
   location: string;
   description: string;
-  imgURL: IMGProps;
-  linkToSocialMedia: string;
+  imgURL?: IMGProps;
+  linkToLocation: string;
   URL: string;
   ALT: string;
 }
@@ -41,7 +41,7 @@ const Disclaimer = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button variant="surface">ADOTAR</Button>
+        <Button variant="surface">VOLUNTARIAR</Button>
       </Dialog.Trigger>
 
       <Dialog.Content>
@@ -63,16 +63,14 @@ const Disclaimer = () => {
               No entanto, compreendemos que imprevistos podem ocorrer, e é por
               isso que pedimos a todos os voluntários que, caso precisem
               desistir da presença em um compromisso, nos avisem com pelo menos
-              24 horas de antecedência, permitindo-nos ajustar nossa programação
+              <strong> 24 horas de antecedência</strong>, permitindo-nos ajustar nossa programação
               e garantir que nossos resgates e cuidados aos animais continuem de
               forma eficaz e organizada. Cada esforço conjunto é valioso na luta
               contra o abandono de animais de estimação, e sua dedicação faz a
               diferença.
             </Text>
-            <Flex direction="column" justify="between" align="center" gap="3">
-              <Text as="div" align="center" size="3" weight="medium">
-                ainda não tem certeza?
-              </Text>
+           
+              
               <Flex align="center" direction="row" justify="between" gap="4">
                 <Dialog.Close>
                   <Button variant="surface">
@@ -80,21 +78,18 @@ const Disclaimer = () => {
                     voltar
                   </Button>
                 </Dialog.Close>
-                <Link href="/help">
-                  <Button variant="surface">
-                    <NextImage className=" w-7" alt="Doe" src={DONATEIcon} />
-                    doar
-                  </Button>
-                </Link>
-              </Flex>
 
-              <Dialog.Close>
+                <Dialog.Close>
                 <Button variant="surface" className="w-32">
                   <HeartFilledIcon width="18" height="18" />
-                  sim, quero me inscrever
+                  inscrever
                 </Button>
               </Dialog.Close>
-            </Flex>
+                
+              </Flex>
+
+              
+            
           </Flex>
         </Flex>
       </Dialog.Content>
@@ -174,6 +169,7 @@ const EventCard: FC<MyProps> = (props) => {
         <Text as="div" size="3">
           {props.description}
         </Text>
+        <Text as='div'>LOCAL: <Link href={props.linkToLocation}>{props.location}</Link></Text>
         <Disclaimer />
       </Flex>
     </Card>
