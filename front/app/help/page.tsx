@@ -49,11 +49,14 @@ const Home = () => {
                   text="seja mensalista"
                 />
               </Link>
-              <STDButton
-                iconAlt="lar temporário"
-                iconNI={TemporaryHomeIcon}
-                text="lar temporário"
-              />
+              <Link href="/temporaryhome">
+                <STDButton
+                  iconAlt="lar temporário"
+                  iconNI={TemporaryHomeIcon}
+                  text="lar temporário"
+                />
+              </Link>
+
               <Link href="/donatefood">
                 <STDButton
                   iconAlt="doe alimentos"

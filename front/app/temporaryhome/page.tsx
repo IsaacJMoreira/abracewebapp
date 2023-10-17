@@ -60,9 +60,7 @@ const Home = () => {
                 iconNI={TemporaryHomeIcon}
                 text="quero me inscrever"
                 callBack={()=>alert("Inscrição no programa 'LAR TEMPORÁRIO' enviada")}
-              />
-
-             
+              />             
 
             
               <Flex align="center" direction="column" justify="between" gap="4">
