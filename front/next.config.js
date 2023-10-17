@@ -8,6 +8,11 @@ const nextConfig = {
               hostname: 'thumbor.forbes.com',
               
             },
+            {
+              protocol: 'https',
+              hostname: 'm.vitoria.es.gov.br',
+              
+            },
           ],
         },
       
