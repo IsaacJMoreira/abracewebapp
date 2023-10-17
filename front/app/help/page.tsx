@@ -69,11 +69,14 @@ const Home = () => {
                 iconNI={PetADogIcon}
                 text="apadrinhar"
               />
-              <STDButton
-                iconAlt="vountariar"
-                iconNI={VOLUNTEERIcon}
-                text="voluntariar"
-              />
+              <Link href="/volunteer">
+                <STDButton
+                  iconAlt="vountariar"
+                  iconNI={VOLUNTEERIcon}
+                  text="voluntariar"
+                />
+              </Link>
+
               <Text align="center" size="1" weight="bold" as="div">
                 entre em contato conosco através das nossas redes
               </Text>
