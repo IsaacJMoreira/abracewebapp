@@ -57,11 +57,6 @@ const Home = () => {
                   text="doe alimentos"
                 />
               </Link>
-              <STDButton
-                iconAlt="apadrinhar"
-                iconNI={PetADogIcon}
-                text="apadrinhar"
-              />
               <Link href="/volunteer">
                 <STDButton
                   iconAlt="vountariar"
