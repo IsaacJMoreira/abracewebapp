@@ -17,6 +17,7 @@ import FrontDog from "../public/assets/images/FrontDog.png";
 import STDButton from "@components/stdButton/STDButton";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
+import PetADogIcon from "../../public/assets/icons/pet-dog.png";
 import { FC, ReactNode, useEffect } from "react";
 import React from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -221,9 +222,17 @@ const AdoptionCard: FC<MyProps> = (props) => {
             </Card>
           </Flex>
         </ScrollArea>
-        <Text as="div" size="8" weight="bold" color="lime">
-          {props.name}
-        </Text>
+        <Flex direction="row" justify="between" align="center">
+          <Text as="div" size="8" weight="bold" color="lime">
+            {props.name}
+          </Text>
+          <STDButton
+            iconAlt="apadrinhar"
+            iconNI={PetADogIcon}
+            text="apadrinhar"
+          />
+        </Flex>
+
         <Text as="div" size="3">
           Cãozinho de 3 anos com pelo longo, temperamento calmo e 30kg, está
           ansioso para ser adotado e encontrar um lar amoroso. Sua personalidade
