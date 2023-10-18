@@ -10,14 +10,37 @@ import CalendarIcon from "../../public/assets/icons/42253 1.png";
 import DogBowIcon from "../../public/assets/icons/3822004 1.png";
 import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
 import Link from "next/link";
+import { useState } from "react";
+
+function showMenu() {
+  return (
+    <Card>
+      <Flex direction="column" justify="between" gap="3" align="center">
+        <Text as="div" color="lime" weight="bold">
+          Escolha como que se voluntariar
+        </Text>
+        <Link href="/temporaryhome">
+          <STDButton
+            iconAlt="lar temporário"
+            iconNI={TemporaryHomeIcon}
+            text="lar temporário"
+          />
+        </Link>
+        <Link href="/Events">
+          <STDButton
+            iconAlt="participar de um evento"
+            iconNI={CalendarIcon}
+            text="eventos"
+          />
+        </Link>
+      </Flex>
+    </Card>
+  );
+}
 
 const Home = () => {
+  const [volunteerMenu, setVolunteerMenu] = useState(false);
   return (
-    // <ScrollArea
-    //   type="always"
-    //   scrollbars="vertical"
-    //   style={{ height: "fit-content" }}
-    // >
     <div>
       <Card className="w-screen ">
         <Inset clip="padding-box" side="top" pb="current">
@@ -56,13 +79,15 @@ const Home = () => {
                   text="doe alimentos"
                 />
               </Link>
-              <Link href="/volunteer">
-                <STDButton
-                  iconAlt="vountariar"
-                  iconNI={VOLUNTEERIcon}
-                  text="voluntariar"
-                />
-              </Link>
+
+              {volunteerMenu ? showMenu() : ""}
+
+              <STDButton
+                iconAlt="vountariar"
+                iconNI={VOLUNTEERIcon}
+                text="voluntariar"
+                callBack={() => setVolunteerMenu(!volunteerMenu)}
+              />
 
               <Text align="center" size="1" weight="bold" as="div">
                 entre em contato conosco através das nossas redes
