@@ -9,7 +9,6 @@ import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
 import CalendarIcon from "../../public/assets/icons/42253 1.png";
 import DogBowIcon from "../../public/assets/icons/3822004 1.png";
 import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
-import PetADogIcon from "../../public/assets/icons/pet-dog.png";
 import Link from "next/link";
 
 const Home = () => {
