@@ -15,8 +15,8 @@ const FoddDonationAdressCard: FC<MyProps> = (props) => {
   return (
     <Card>
       <Link href={props.link}>
-        <Flex direction="row" gap="1" align="center" justify="between">
-          <NextImage className="w-16" src={LocationIon} alt="Localização" />
+        <Flex direction="row" gap="2" align="center" justify="between">
+          <NextImage className="w-12" src={LocationIon} alt="Localização" />
           <Blockquote>
             <Heading size="5" color="lime">
               {props.name}

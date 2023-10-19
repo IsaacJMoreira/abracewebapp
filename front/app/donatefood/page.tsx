@@ -15,7 +15,7 @@ import STDButton from "@components/stdButton/STDButton";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
 import FoddDonationAdressCard from "@components/FoodDonationAdressCard/FoddDonationAdressCard";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
-import WhatsAppIcon from "../../public/assets/icons/whatsAppIcon.png";
+import WhatsAppIcon from "../../public/assets/icons/whatsAppIcon.svg";
 import Link from "next/link";
 import { useState } from "react";
 
