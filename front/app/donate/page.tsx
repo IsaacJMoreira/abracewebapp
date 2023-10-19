@@ -96,6 +96,8 @@ const Home = () => {
                 />
               </Link>
 
+              <Text as='div' size='1' weight='bold'>continue ajudando essa causa animal</Text>
+
               {volunteerMenu ? showMenu() : ""}
 
               <STDButton
