@@ -71,7 +71,7 @@ const Home = () => {
           <Card className="w-11/12">
             <Flex align="center" direction="column" justify="between" gap="4">
               <Text align="center" size="5" weight="bold" as="div" color="lime">
-                você pode nos ajudar de várias maneiras
+                você pode doar de várias formas
               </Text>
               <Link href="/pix">
                 <STDButton
