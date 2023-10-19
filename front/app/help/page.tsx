@@ -9,6 +9,7 @@ import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
 import CalendarIcon from "../../public/assets/icons/42253 1.png";
 import DogBowIcon from "../../public/assets/icons/3822004 1.png";
 import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
+import CarIcon from "../../public/assets/icons/carIcon.png"
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,13 +18,27 @@ function showMenu() {
     <Card>
       <Flex direction="column" justify="between" gap="3" align="center">
         <Text as="div" color="lime" weight="bold">
-          Escolha como que se voluntariar
+          Escolha como quer se voluntariar
         </Text>
         <Link href="/temporaryhome">
           <STDButton
             iconAlt="lar temporário"
             iconNI={TemporaryHomeIcon}
             text="lar temporário"
+          />
+        </Link>
+        <Link href="/sundayvolunteer">
+          <STDButton
+            iconAlt="domingário"
+            iconNI={CalendarIcon}
+            text="domingário"
+          />
+        </Link>
+        <Link href="/transportationvolunteer">
+          <STDButton
+            iconAlt="transportation"
+            iconNI={CarIcon}
+            text="transporte"
           />
         </Link>
         <Link href="/Events">
@@ -33,6 +48,7 @@ function showMenu() {
             text="eventos"
           />
         </Link>
+       
       </Flex>
     </Card>
   );
