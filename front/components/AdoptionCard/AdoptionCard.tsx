@@ -240,6 +240,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
           Adote Thomas e dê a ele a chance de ter um lar para sempre cheio de
           amor e carinho.
         </Text>
+        <Text as='div' color='lime' size='1' weight='bold'>* - quatidade aproximada</Text>
         <Disclaimer />
       </Flex>
     </Card>

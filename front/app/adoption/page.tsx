@@ -64,7 +64,7 @@ const Adoption = () => {
           furType="longo"
           weight={10}
           weightUnity="Kg"
-          ageUnity="anos"
+          ageUnity="anos*"
         />
         <AdoptionCard
           name="Thomas"
