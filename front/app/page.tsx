@@ -58,18 +58,21 @@ const Home = () => {
                 você também pode ajudar essa causa animal
               </Text>
               <Flex align="center" direction="row" justify="between" gap="4">
-              <Link href="/help">
-                <STDButton
-                  iconAlt="Doe"
-                  iconNI={DONATEIcon}
-                  text="quero doar"
-                />
-              </Link>
-                <STDButton
-                  iconAlt="vountariar"
-                  iconNI={VOLUNTEERIcon}
-                  text="voluntariar"
-                />
+                <Link href="/donate">
+                  <STDButton
+                    iconAlt="Doe"
+                    iconNI={DONATEIcon}
+                    text="quero doar"
+                  />
+                </Link>
+
+                <Link href='/volunteer'>
+                  <STDButton
+                    iconAlt="vountariar"
+                    iconNI={VOLUNTEERIcon}
+                    text="voluntariar"
+                  />
+                </Link>
               </Flex>
             </Flex>
           </Box>
