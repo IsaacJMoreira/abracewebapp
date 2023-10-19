@@ -71,7 +71,7 @@ const Home = () => {
                 caso não possa se deslocar até os locais de coleta, entre em
                 contato conosco
               </Text>
-              <Link href="https://wa.me//558599226771?text=Oi!%20Gostaria%20%20de%20doar%20alimentos!">
+              <Link href="https://wa.me//558588128654?text=Oi!%20Gostaria%20%20de%20doar%20alimentos!">
                 <NextImage
                 className="w-40"
                 src={WhatsAppIcon}
