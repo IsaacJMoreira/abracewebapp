@@ -90,13 +90,13 @@ const Disclaimer = () => {
                     voltar
                   </Button>
                 </Dialog.Close>
-                <Link href="/help">
+                <Link href="/donate">
                   <Button variant="surface">
                     <NextImage className=" w-7" alt="Doe" src={DONATEIcon} />
                     doar
                   </Button>
                 </Link>
-                <Link href="/help">
+                <Link href="/volunteer">
                   <Button variant="surface">
                     <NextImage
                       className=" w-7"
