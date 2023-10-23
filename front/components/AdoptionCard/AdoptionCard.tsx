@@ -2,14 +2,11 @@
 import {
   Card,
   Flex,
-  Box,
   Text,
   Button,
   ScrollArea,
   Inset,
   Dialog,
-  Separator,
-  TextField,
   Link,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
@@ -21,14 +18,7 @@ import PetADogIcon from "../../public/assets/icons/pet-dog.png";
 import { FC, ReactNode, useEffect } from "react";
 import React from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import {
-  CheckIcon,
-  ChevronLeftIcon,
-  Cross1Icon,
-  HeartFilledIcon,
-  LockClosedIcon,
-  PersonIcon,
-} from "@radix-ui/react-icons";
+import { ChevronLeftIcon, HeartFilledIcon } from "@radix-ui/react-icons";
 
 interface IMGProps {
   URL?: string;
@@ -130,7 +120,15 @@ const AdoptionCard: FC<MyProps> = (props) => {
   return (
     <Card className="max-w-sm " variant="surface">
       <Inset clip="padding-box" side="top" pb="current">
-        <NextImage width="384" height="100" src={props.URL} alt={props.ALT} />
+        <NextImage  className='-z-10' width="384" height="100" src={props.URL} alt={props.ALT} />
+      
+      <Flex className="absolute top-2  right-2" direction="row" justify="end" align="center">
+        <STDButton
+          iconAlt="apadrinhar"
+          iconNI={PetADogIcon}
+          text="apadrinhar"
+        />
+      </Flex>
       </Inset>
 
       <Flex direction="column" justify="between" gap="2">
@@ -222,16 +220,10 @@ const AdoptionCard: FC<MyProps> = (props) => {
             </Card>
           </Flex>
         </ScrollArea>
-        <Flex direction="row" justify="between" align="center">
-          <Text as="div" size="8" weight="bold" color="lime">
-            {props.name}
-          </Text>
-          <STDButton
-            iconAlt="apadrinhar"
-            iconNI={PetADogIcon}
-            text="apadrinhar"
-          />
-        </Flex>
+
+        <Text as="div" size="8" weight="bold" color="lime">
+          {props.name}
+        </Text>
 
         <Text as="div" size="3">
           Cãozinho de 3 anos com pelo longo, temperamento calmo e 30kg, está
@@ -240,7 +232,9 @@ const AdoptionCard: FC<MyProps> = (props) => {
           Adote Thomas e dê a ele a chance de ter um lar para sempre cheio de
           amor e carinho.
         </Text>
-        <Text as='div' color='lime' size='1' weight='bold'>* - quatidade aproximada</Text>
+        <Text as="div" color="lime" size="1" weight="bold">
+          * - quatidade aproximada
+        </Text>
         <Disclaimer />
       </Flex>
     </Card>
