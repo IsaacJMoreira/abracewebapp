@@ -8,6 +8,7 @@ import {
   Inset,
   Dialog,
   Link,
+  DropdownMenu,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
 import FrontDog from "../public/assets/images/FrontDog.png";
@@ -15,7 +16,7 @@ import STDButton from "@components/stdButton/STDButton";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
 import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
 import PetADogIcon from "../../public/assets/icons/pet-dog.png";
-import { FC, ReactNode, useEffect } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import React from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ChevronLeftIcon, HeartFilledIcon } from "@radix-ui/react-icons";
@@ -117,18 +118,38 @@ const Disclaimer = () => {
 };
 
 const AdoptionCard: FC<MyProps> = (props) => {
+  const [sponsor, setSponsor] = useState(false);
+
   return (
     <Card className="max-w-sm " variant="surface">
       <Inset clip="padding-box" side="top" pb="current">
-        <NextImage  className='-z-10' width="384" height="100" src={props.URL} alt={props.ALT} />
-      
-      <Flex className="absolute top-2  right-2" direction="row" justify="end" align="center">
-        <STDButton
-          iconAlt="apadrinhar"
-          iconNI={PetADogIcon}
-          text="apadrinhar"
-        />
-      </Flex>
+        <NextImage width="384" height="100" src={props.URL} alt={props.ALT} />
+
+        <Flex
+          className="absolute top-2  right-2"
+          direction="row"
+          justify="end"
+          align="center"
+        >
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger>
+              <Button variant="solid">
+                <NextImage
+                  src={PetADogIcon}
+                  alt="botão apadrinhar"
+                  width="32"
+                />
+                apadrinhar
+              </Button>
+            </DropdownMenu.Trigger>
+            <DropdownMenu.Content>
+              <DropdownMenu.Item>Valor Fixo</DropdownMenu.Item>
+              <DropdownMenu.Item>Alimento</DropdownMenu.Item>
+              <DropdownMenu.Item>Produtos de higiene</DropdownMenu.Item>
+              <DropdownMenu.Item>Kit</DropdownMenu.Item>
+            </DropdownMenu.Content>
+          </DropdownMenu.Root>
+        </Flex>
       </Inset>
 
       <Flex direction="column" justify="between" gap="2">
