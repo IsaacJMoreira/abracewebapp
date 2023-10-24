@@ -21,6 +21,7 @@ import {
   LockClosedIcon,
   AvatarIcon,
   TriangleDownIcon,
+  ClipboardIcon,
 } from "@radix-ui/react-icons";
 import * as Progress from "@radix-ui/react-progress";
 import NextImage from "next/image";
@@ -48,7 +49,7 @@ interface MyProps {
 }
 
 const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
-  const [progress, setProgress] = useState(20);
+  const [progress, setProgress] = useState(10);
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -61,68 +62,114 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
       </Dialog.Trigger>
 
       <Dialog.Content>
-        <Dialog.Title>{props.userName}</Dialog.Title>
+        <Flex direction="row" align="start" justify="between" gap="3">
+          <Dialog.Title>{props.userName}</Dialog.Title>
+          {progress < 100 ? (
+            <Card variant="ghost" className=" w-40 p-1 relative -top-5">
+            <Flex
+              align="center"
+              justify="between"
+              gap="3"
+              direction="row"
+            >
+              <Box className="w-full">
+                <div
+                  className="w-full rounded-md gap-0  relative top-3"
+                  style={{ transform: `translateX(${progress - 5.5}%)` }}
+                >
+                  <Flex
+                    direction="column"
+                    gap="0"
+                    justify="between"
+                    align="start"
+                  >
+                    <Text as="div" size="1">{`${progress}%`}</Text>
+                    <TriangleDownIcon className="relative -top-2" />
+                  </Flex>
+                </div>
+
+                <Progress.Root
+                  className="relative overflow-hidden bg-lime-900 rounded-full w-100 h-[10px]"
+                  style={{
+                    transform: "translateZ(0)",
+                  }}
+                  value={progress}
+                >
+                  <Progress.Indicator
+                    className="bg-lime-300 w-full h-full transition-transform duration-[660ms] ease-[cubic-bezier(0.65, 0, 0.35, 1)]"
+                    style={{
+                      transform: `translateX(-${100 - progress}%)`,
+                    }}
+                  />
+                </Progress.Root>
+                
+              </Box>
+            </Flex>
+          </Card>
+          ) : (
+            <Badge>
+              <CheckIcon />
+              {`${progress}%`}
+            </Badge>
+          )}
+        </Flex>
+
+        <Separator orientation="horizontal" size="4" />
 
         <Flex
           direction="column"
           justify="start"
           gap="3"
-          align="start"
+          align="center"
           className="w-full"
         >
           {progress < 100 ? (
-            <Link href="/adoption">
-              <Card variant="classic">               
-                <Flex align="center" justify="between" gap="3" direction="row">
-                  <Box>
-                    <NextImage
-                      src={DogPersonIcon}
-                      alt="complete seu perfil"
-                      width="70"
-                    />
-                  </Box>
-
-                  <Separator orientation="vertical" size="3" />
-                  <Box className="w-full">
-                    <div
-                      className="w-full rounded-md gap-0  relative top-2"
-                      style={{ transform: `translateX(${progress - 3}%)` }}
-                    >
-                      <Flex
-                        direction="column"
-                        gap="0"
-                        justify="between"
-                        align="start"
-                      >
-                        <Text as="div" size="1">{`${progress}%`}</Text>
-                        <TriangleDownIcon className="relative -top-1" />
-                      </Flex>
-                    </div>
-
-                    <Progress.Root
-                      className="relative overflow-hidden bg-lime-900 rounded-full w-full h-[25px]"
-                      style={{
-                        transform: "translateZ(0)",
-                      }}
-                      value={progress}
-                    >
-                      <Progress.Indicator
-                        className="bg-lime-300 w-full h-full transition-transform duration-[660ms] ease-[cubic-bezier(0.65, 0, 0.35, 1)]"
-                        style={{ transform: `translateX(-${100 - progress}%)` }}
-                      />
-                    </Progress.Root>
-                    <Text as="div" size="1" color="lime" weight="light">
-                      Complete seu perfil para começar a adotar
-                    </Text>
-                  </Box>
-                </Flex>
-              </Card>
-            </Link>
+            <>
+              <Text as="div" size="1" color="lime">
+                A<strong> ABRACE</strong> e todos os animais sob nossa
+                responsabilidade agradecem seu interesse nessa causa animal!
+                <br />
+                <strong>Seu perfil ainda não foi concluído.</strong> Isso
+                significa que você ainda não pode proseguir com a adoção de um
+                pet nem ser voluntário ABRACE.
+                <br />
+                Para concluir o seu perfil, é necessário o preenchimento do
+                nosso questionário. Isto levará cerca de<strong> 10 min.</strong> Todas as
+                perguntas e informações requeridas foram desenvolvidas para
+                garantir que um processo de adoção responsável.
+                <br />
+                <strong>
+                  Clique no botão abaixo para concluir o seu perfil.
+                </strong>
+              </Text>
+              <Link href="/profile/questionnaire">
+              <Button variant="surface">
+                <ClipboardIcon width="18" height="18" />
+                Responder ao questionário
+              </Button>
+              </Link>
+            </>
           ) : (
-            <Button variant="surface">
-              <PersonIcon />
-              perfil completo
-            </Button>
+            <>
+              <Text as="div" size="1" color="lime">
+                A<strong> ABRACE</strong> e todos os animais sob nossa
+                responsabilidade agradecem seu comprometimento com essa causa
+                animal!
+                <br />
+                <strong>Seu perfil está 100% completo.</strong> Isso significa
+                que você já pode proseguir com a adoção de um pet, ser
+                voluntário ABRACE e até realizar doações.
+                <br />
+                Te convidamos para conhecer seu futuro melhor amigo!
+              </Text>
+              <Separator orientation="horizontal" size="4" />
+              <Link href="/profile">
+                <Button variant="surface">
+                  <PersonIcon />
+                  meu perfil
+                </Button>
+              </Link>
+            </>
           )}
 
           <Separator orientation="horizontal" size="4" />
