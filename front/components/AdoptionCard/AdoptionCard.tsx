@@ -133,7 +133,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
         >
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
-              <Button variant="solid">
+              <Button variant="surface">
                 <NextImage
                   src={PetADogIcon}
                   alt="botão apadrinhar"
