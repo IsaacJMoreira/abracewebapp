@@ -18,11 +18,7 @@ import Link from "next/link";
 
 const Home = () => {
   return (
-    // <ScrollArea
-    //   type="always"
-    //   scrollbars="vertical"
-    //   style={{ height: "fit-content" }}
-    // >
+    
     <div>
       <Card className="w-screen ">
         <Inset clip="padding-box" side="top" pb="current">

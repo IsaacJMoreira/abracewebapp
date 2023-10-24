@@ -1,3 +1,5 @@
+const { blackA } = require('@radix-ui/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,6 +14,7 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
+        ...blackA,
         'C1': '#EAF4E3',
         'C2': '#F7EB7A',
         'C3': '#BED66C',
