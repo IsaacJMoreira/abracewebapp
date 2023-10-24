@@ -124,32 +124,6 @@ const AdoptionCard: FC<MyProps> = (props) => {
     <Card className="max-w-sm " variant="surface">
       <Inset clip="padding-box" side="top" pb="current">
         <NextImage width="384" height="100" src={props.URL} alt={props.ALT} />
-
-        <Flex
-          className="absolute top-2  right-2"
-          direction="row"
-          justify="end"
-          align="center"
-        >
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger>
-              <Button variant="surface">
-                <NextImage
-                  src={PetADogIcon}
-                  alt="botão apadrinhar"
-                  width="32"
-                />
-                apadrinhar
-              </Button>
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Content>
-              <DropdownMenu.Item>Valor Fixo</DropdownMenu.Item>
-              <DropdownMenu.Item>Alimento</DropdownMenu.Item>
-              <DropdownMenu.Item>Produtos de higiene</DropdownMenu.Item>
-              <DropdownMenu.Item>Kit</DropdownMenu.Item>
-            </DropdownMenu.Content>
-          </DropdownMenu.Root>
-        </Flex>
       </Inset>
 
       <Flex direction="column" justify="between" gap="2">
@@ -242,9 +216,29 @@ const AdoptionCard: FC<MyProps> = (props) => {
           </Flex>
         </ScrollArea>
 
-        <Text as="div" size="8" weight="bold" color="lime">
-          {props.name}
-        </Text>
+        <Flex direction="row" justify="between" align="center">
+          <Text as="div" size="8" weight="bold" color="lime">
+            {props.name}
+          </Text>
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger>
+              <Button variant="surface">
+                <NextImage
+                  src={PetADogIcon}
+                  alt="botão apadrinhar"
+                  width="32"
+                />
+                apadrinhar
+              </Button>
+            </DropdownMenu.Trigger>
+            <DropdownMenu.Content>
+              <DropdownMenu.Item>Valor Fixo</DropdownMenu.Item>
+              <DropdownMenu.Item>Alimento</DropdownMenu.Item>
+              <DropdownMenu.Item>Produtos de higiene</DropdownMenu.Item>
+              <DropdownMenu.Item>Kit</DropdownMenu.Item>
+            </DropdownMenu.Content>
+          </DropdownMenu.Root>
+        </Flex>
 
         <Text as="div" size="3">
           Cãozinho de 3 anos com pelo longo, temperamento calmo e 30kg, está
