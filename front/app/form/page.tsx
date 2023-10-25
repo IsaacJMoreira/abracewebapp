@@ -298,7 +298,7 @@ const FormAbrace = () => {
               </Form.Control>
             </Form.Field>
             <Form.Submit asChild>
-              <Button className="w-full">
+              <Button className="w-full" variant="surface">
                 Enviar
               </Button>
             </Form.Submit>
