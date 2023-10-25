@@ -15,6 +15,7 @@ import {
 import {
   Cross1Icon,
   CheckIcon,
+  CheckboxIcon,
   ChevronDownIcon,
   ExitIcon,
   PersonIcon,
@@ -108,7 +109,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
           </Card>
           ) : (
             <Badge>
-              <CheckIcon />
+              <CheckboxIcon />
               {`${progress}%`}
             </Badge>
           )}
@@ -142,7 +143,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
                   Clique no botão abaixo para concluir o seu perfil.
                 </strong>
               </Text>
-              <Link href="/profile/questionnaire">
+              <Link href="/form">
               <Button variant="surface">
                 <ClipboardIcon width="18" height="18" />
                 Responder ao questionário
