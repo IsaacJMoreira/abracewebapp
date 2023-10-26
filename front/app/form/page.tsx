@@ -6,11 +6,14 @@ import {
   Box,
   Button,
   Card,
+  Checkbox,
   Flex,
   Heading,
+  RadioGroup,
   Separator,
   Switch,
   Text,
+  TextArea,
 } from "@radix-ui/themes";
 import {
   CheckIcon,
@@ -86,7 +89,13 @@ const FormAbrace = () => {
                       }}
                     />
                   </Progress.Root>
-                  <Text as="div" size="1" weight="light" color="lime">
+                  <Text
+                    as="div"
+                    size="1"
+                    weight="light"
+                    color="lime"
+                    align="center"
+                  >
                     quase lá!
                   </Text>
                 </Box>
@@ -304,11 +313,312 @@ const FormAbrace = () => {
             </Form.Submit>
           </Form.Root>
         </Tabs.Content>
+
         <Tabs.Content
           value="tab2"
           className="grow p-5 bg-[#ffffff] rounded-b-md outline-none"
         >
-          <Text as="div">tab2</Text>
+          <Form.Root>
+            <Form.Field name="tipoDeResidencia">
+              <Form.Label className="text-[15px] font-medium leading-[35px] text-black">
+                eu moro em *
+              </Form.Label>
+              <Form.Control asChild>
+                <RadioGroup.Root defaultValue="1">
+                  <Flex gap="2" direction="column">
+                    <Text as="label" size="2">
+                      <Flex gap="2">
+                        <RadioGroup.Item value="1" /> uma casa
+                      </Flex>
+                    </Text>
+                    <Text as="label" size="2">
+                      <Flex gap="2">
+                        <RadioGroup.Item value="2" /> um apartamento
+                      </Flex>
+                    </Text>
+                    <Text as="label" size="2">
+                      <Flex gap="2">
+                        <RadioGroup.Item value="3" /> um sítio
+                      </Flex>
+                    </Text>
+                    <Text as="label" size="2">
+                      <Flex gap="2">
+                        <RadioGroup.Item value="4" /> uma chácara
+                      </Flex>
+                    </Text>
+                  </Flex>
+                </RadioGroup.Root>
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field name="tipoDeResidencia">
+              <Form.Label className="text-[15px] font-medium leading-[35px] text-black">
+                minha residência é *
+              </Form.Label>
+              <Form.Control asChild>
+                <Flex
+                  direction="column"
+                  align="start"
+                  justify="between"
+                  gap="3"
+                >
+                  <RadioGroup.Root defaultValue="1">
+                    <Flex gap="2" direction="column">
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="1" /> alugada
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="2" /> própria
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="3" /> de um parente/amigo
+                        </Flex>
+                      </Text>
+                    </Flex>
+                  </RadioGroup.Root>
+                </Flex>
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field name="aceitaAnimais">
+              <Form.Label className="text-[15px] font-medium leading-[35px] text-black">
+                caso seja alugada, o proprietário aceita animais?
+              </Form.Label>
+              <Form.Control asChild>
+                <Flex
+                  direction="column"
+                  align="start"
+                  justify="between"
+                  gap="3"
+                >
+                  <RadioGroup.Root defaultValue="1">
+                    <Flex gap="2" direction="column">
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="1" /> sim
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="2" /> não
+                        </Flex>
+                      </Text>
+                    </Flex>
+                  </RadioGroup.Root>
+                </Flex>
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="regrasCondominio">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                  caso more em condomínio, quais são as normas para a criação de
+                  animais de estimação?
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="EX: o condomínio permite animais, mas possui restrições de circulação nas áreas comuns"
+                />
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field name="portao">
+              <Form.Label className="text-[15px] font-medium leading-[35px] text-black">
+                na sua residência, o portão que dá acesso à rua é:
+              </Form.Label>
+              <Form.Control asChild>
+                <Flex
+                  direction="column"
+                  align="start"
+                  justify="between"
+                  gap="3"
+                >
+                  <RadioGroup.Root defaultValue="1">
+                    <Flex gap="2" direction="column">
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="1" /> gradeado
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="2" /> parte gradeado, parte
+                          fechado
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="3" /> totalmente fechado
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="4" /> telado/protejido por
+                          tela
+                        </Flex>
+                      </Text>
+                      <Text as="label" size="2">
+                        <Flex gap="2">
+                          <RadioGroup.Item value="4" /> não possui portão/acesso
+                          livre à rua
+                        </Flex>
+                      </Text>
+                    </Flex>
+                  </RadioGroup.Root>
+                </Flex>
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field name="residenciaPossui">
+              <Form.Label className="text-[15px] font-medium leading-[35px] text-black">
+                assinale as opções que sua residência possui:
+              </Form.Label>
+              <Form.Control asChild>
+                <Flex
+                  direction="column"
+                  align="start"
+                  justify="between"
+                  gap="3"
+                >
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> quintal
+                    </Flex>
+                  </Text>
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> área/garágem
+                    </Flex>
+                  </Text>
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> varanda
+                    </Flex>
+                  </Text>
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> muro com mais de 2 metros ou mais de altura
+                    </Flex>
+                  </Text>
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> muro entre 1 e 2 metros de altura
+                    </Flex>
+                  </Text>
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> muro com menos de 1 metro de altura
+                    </Flex>
+                  </Text>
+                  <Text as="label" size="2">
+                    <Flex gap="2">
+                      <Checkbox /> janelas teladas
+                    </Flex>
+                  </Text>
+                </Flex>
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="descricaoQuintal">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                  caso sua residência possua quintal, descreva-o a seguir: *
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="EX: meu quintal possui área gramada, com um caminho em cimento, vasos de platas, um deck para churrasco coberto."
+                  required
+                />
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="moradoresHumanos">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                  o novo pet partilhará o lar com quantos humano? quem são?
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="EX: 3 pessoas, eu, minha namorada (Fulana de Tal) e nosso filho (Fulano Júnior) de 7 anos de idade."
+                  required
+                />
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="seMorder">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                  se o animal mordesse/arranhasse você/seu filho/outro membro da
+                  família como seria a reação?
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="tente se imaginar na situação e responsa da maneira mais sincera possível"
+                  required
+                />
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="possuiVeículo">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                  possui veículo para o transporte do animal? Caso sim, de qual
+                  tipo? Caso não, como levará o animal para o veterinário?
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="EX: possuo uma moto, mas moro a 2 quarteirões da casa dos meus pais e eles possuem carro, podendo levar o pet ao veterinário tranquilamente."
+                  required
+                />
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="trabalha">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                você trabalha no momento? e as pessoas que vivem com você?
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="EX: sim, trabalho em home office, meu esposo trabalha fora e meu filho ainda estuda"
+                  required
+                />
+              </Form.Control>
+            </Form.Field>
+
+            <Form.Field className="grid mb-[10px]" name="alergias">
+              <div className="flex items-baseline justify-between">
+                <Form.Label className="text-[15px] font-medium  text-black">
+                você ou algum humano que reside com você possui algum tipo de alergia?
+                </Form.Label>
+              </div>
+              <Form.Control asChild>
+                <TextArea
+                  className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[100px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-lime-600 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_lime] focus:shadow-[0_0_0_2px_lime] selection:color-white selection:bg-lime-300"
+                  placeholder="EX: eu não possuo alergias, meu filho possui alergia a ácaros e pólen"
+                  required
+                />
+              </Form.Control>
+            </Form.Field>
+
+          </Form.Root>
         </Tabs.Content>
         <Tabs.Content
           value="tab3"
