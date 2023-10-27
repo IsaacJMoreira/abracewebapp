@@ -9,53 +9,11 @@ import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
 import CalendarIcon from "../../public/assets/icons/42253 1.png";
 import DogBowIcon from "../../public/assets/icons/3822004 1.png";
 import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
-import CarIcon from "../../public/assets/icons/carIcon.png"
+import CarIcon from "../../public/assets/icons/carIcon.png";
 import Link from "next/link";
 import { useState } from "react";
 
-function showMenu() {
-  return (
-    <Card>
-      <Flex direction="column" justify="between" gap="3" align="center">
-        <Text as="div" color="lime" weight="bold">
-          Escolha como quer se voluntariar
-        </Text>
-        <Link href="/temporaryhome">
-          <STDButton
-            iconAlt="lar temporário"
-            iconNI={TemporaryHomeIcon}
-            text="lar temporário"
-          />
-        </Link>
-        <Link href="/sundayvolunteer">
-          <STDButton
-            iconAlt="domingário"
-            iconNI={CalendarIcon}
-            text="domingário"
-          />
-        </Link>
-        <Link href="/transportationvolunteer">
-          <STDButton
-            iconAlt="transportation"
-            iconNI={CarIcon}
-            text="transporte"
-          />
-        </Link>
-        <Link href="/Events">
-          <STDButton
-            iconAlt="participar de um evento"
-            iconNI={CalendarIcon}
-            text="eventos"
-          />
-        </Link>
-       
-      </Flex>
-    </Card>
-  );
-}
-
 const Home = () => {
-  const [volunteerMenu, setVolunteerMenu] = useState(false);
   return (
     <div>
       <Card className="w-screen ">
@@ -96,16 +54,17 @@ const Home = () => {
                 />
               </Link>
 
-              <Text as='div' size='1' weight='bold'>continue ajudando essa causa animal</Text>
+              <Text as="div" size="1" weight="bold">
+                continue ajudando essa causa animal
+              </Text>
 
-              {volunteerMenu ? showMenu() : ""}
-
-              <STDButton
-                iconAlt="vountariar"
-                iconNI={VOLUNTEERIcon}
-                text="voluntariar"
-                callBack={() => setVolunteerMenu(!volunteerMenu)}
-              />
+              <Link href="/volunteer">
+                <STDButton
+                  iconAlt="vountariar"
+                  iconNI={VOLUNTEERIcon}
+                  text="voluntariar"
+                />
+              </Link>
 
               <Text align="center" size="1" weight="bold" as="div">
                 entre em contato conosco através das nossas redes

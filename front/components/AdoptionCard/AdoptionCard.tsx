@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Card,
   Flex,
@@ -6,8 +7,8 @@ import {
   Button,
   ScrollArea,
   Inset,
-  Dialog,
   Link,
+  Dialog,
   DropdownMenu,
 } from "@radix-ui/themes";
 import NextImage from "next/image";
@@ -41,9 +42,13 @@ interface MyProps {
   sex?: boolean;
   weight?: number;
   weightUnity?: string;
+  petID?: string;
+}
+interface DisclaimerProps {
+  petID?: string;
 }
 
-const Disclaimer = () => {
+const Disclaimer: FC<DisclaimerProps> = (props) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -104,10 +109,12 @@ const Disclaimer = () => {
               </Text>
 
               <Dialog.Close>
-                <Button variant="surface" className="w-32">
-                  <HeartFilledIcon width="18" height="18" />
-                  sim, adotar
-                </Button>
+                <Link href={`adoption/adopt/${props.petID}`}>
+                  <Button variant="surface" className="w-32">
+                    <HeartFilledIcon width="18" height="18" />
+                    sim, adotar
+                  </Button>
+                </Link>
               </Dialog.Close>
             </Flex>
           </Flex>
@@ -118,8 +125,6 @@ const Disclaimer = () => {
 };
 
 const AdoptionCard: FC<MyProps> = (props) => {
-  const [sponsor, setSponsor] = useState(false);
-
   return (
     <Card className="max-w-sm " variant="surface">
       <Inset clip="padding-box" side="top" pb="current">
@@ -220,24 +225,13 @@ const AdoptionCard: FC<MyProps> = (props) => {
           <Text as="div" size="8" weight="bold" color="lime">
             {props.name}
           </Text>
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger>
-              <Button variant="surface">
-                <NextImage
-                  src={PetADogIcon}
-                  alt="botão apadrinhar"
-                  width="32"
-                />
-                apadrinhar
-              </Button>
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Content>
-              <DropdownMenu.Item>Valor Fixo</DropdownMenu.Item>
-              <DropdownMenu.Item>Alimento</DropdownMenu.Item>
-              <DropdownMenu.Item>Produtos de higiene</DropdownMenu.Item>
-              <DropdownMenu.Item>Kit</DropdownMenu.Item>
-            </DropdownMenu.Content>
-          </DropdownMenu.Root>
+
+          <Link href={`/adoption/sponsor/${props.petID}`}>
+            <Button variant="surface">
+              <NextImage src={PetADogIcon} alt="botão apadrinhar" width="32" />
+              apadrinhar
+            </Button>
+          </Link>
         </Flex>
 
         <Text as="div" size="3">
@@ -250,7 +244,7 @@ const AdoptionCard: FC<MyProps> = (props) => {
         <Text as="div" color="lime" size="1" weight="bold">
           * - quatidade aproximada
         </Text>
-        <Disclaimer />
+        <Disclaimer petID={props.petID} />
       </Flex>
     </Card>
   );

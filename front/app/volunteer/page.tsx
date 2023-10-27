@@ -1,141 +1,103 @@
 "use client";
-import { InstagramLogoIcon } from "@radix-ui/react-icons";
-import { Card, Flex, Text, Button, Inset, IconButton } from "@radix-ui/themes";
+import {
+  Card,
+  Flex,
+  Box,
+  Text,
+  Button,
+  ScrollArea,
+  Switch,
+  Separator,
+} from "@radix-ui/themes";
 import NextImage from "next/image";
-import VolunteerIMG from "../../public/assets/images/Volunteer.jpg";
+import FrontDog from "../../public/assets/images/FrontDog.png";
 import STDButton from "@components/stdButton/STDButton";
-import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
 import DONATEIcon from "../../public/assets/icons/2904845 1.png";
-import PIXIcon from "../../public/assets/icons/pix_icon_198027 1.png";
-import CalendarIcon from "../../public/assets/icons/42253 1.png";
-import DogBowIcon from "../../public/assets/icons/3822004 1.png";
-import TemporaryHomeIcon from "../../public/assets/icons/3203239 1.png";
-import CarIcon from "../../public/assets/icons/carIcon.png";
-import Link from "next/link";
-import { useState } from "react";
+import VOLUNTEERIcon from "../../public/assets/icons/volunteer-icon-10 1.png";
+import { useEffect, useState } from "react";
+import DogIcon from "../../public/assets/icons/dogIcon.png";
+import CatIcon from "../../public/assets/icons/catIcon.png";
+import EventCard from "@components/EventCard/EventCard";
 
-function showMenu() {
-  return (
-    <Card>
-      <Flex direction="column" justify="between" gap="3" align="center">
-        <Text as="div" color="lime" weight="bold">
-          Escolha como doar
-        </Text>
-        <Link href="/pix">
-          <STDButton
-            iconAlt="pix copia e cola"
-            iconNI={PIXIcon}
-            text="PIX copia e cola"
-          />
-        </Link>
-
-        <Link href="/subscription">
-          <STDButton
-            iconAlt="seja mensalista"
-            iconNI={CalendarIcon}
-            text="seja mensalista"
-          />
-        </Link>
-        <Link href="/donatefood">
-          <STDButton
-            iconAlt="doe alimentos"
-            iconNI={DogBowIcon}
-            text="doe alimentos"
-          />
-        </Link>
-      </Flex>
-    </Card>
-  );
-}
-
-const Home = () => {
-  const [donateMenu, setDonateMenu] = useState(false);
+const Adoption = () => {
   return (
     <div>
-      <Card className="w-screen ">
-        <Inset clip="padding-box" side="top" pb="current">
-          <NextImage
-            className="w-screen"
-            src={VolunteerIMG}
-            alt="Cachorro de pelo marrom com patas brancas apoiado num card branco"
-          />
-        </Inset>
+      <Text as="div" weight="bold" align="center" color="lime" size="4">
+        nossos próximos eventos
+      </Text>
 
-        <Flex align="center" direction="column" justify="between" gap="4">
-          <Card className="w-11/12">
-            <Flex align="center" direction="column" justify="between" gap="4">
-              <Text align="center" size="5" weight="bold" as="div" color="lime">
-                seja um voluntário ABRACE
-              </Text>
-              <Link href="/temporaryhome">
-                <STDButton
-                  iconAlt="lar temporário"
-                  iconNI={TemporaryHomeIcon}
-                  text="lar temporário"
-                />
-              </Link>
-              <Link href="/sundayvolunteer">
-                <STDButton
-                  iconAlt="domingário"
-                  iconNI={CalendarIcon}
-                  text="domingário"
-                />
-              </Link>
-
-              <Link href="/transportationvolunteer">
-                <STDButton
-                  iconAlt="transportation"
-                  iconNI={CarIcon}
-                  text="transporte"
-                />
-              </Link>
-              <Link href="/Events">
-                <STDButton
-                  iconAlt="participar de um evento"
-                  iconNI={CalendarIcon}
-                  text="eventos"
-                />
-              </Link>
-
-              <Text as="div" size="1" weight="bold">
-                continue ajudando essa causa animal
-              </Text>
-
-              {donateMenu ? showMenu() : ""}
-
-              <STDButton
-                iconAlt="Doe"
-                iconNI={DONATEIcon}
-                text="quero doar"
-                callBack={() => setDonateMenu(!donateMenu)}
-              />
-
-              <Text align="center" size="1" weight="bold" as="div">
-                entre em contato conosco através das nossas redes
-              </Text>
-              <IconButton>
-                <InstagramLogoIcon width="20" height="20" />
-              </IconButton>
-            </Flex>
-          </Card>
-
-          <Flex align="center" direction="column" justify="between" gap="4">
-            <Text align="center" size="1" weight="bold" as="div">
-              temos vários amiguinhos esperando um novo lar. <br /> Vamos
-              conhecê-los?
-            </Text>
-            <Link href="/adoption">
-              <Button style={{ width: "75vw", maxWidth: 340 }} size="3">
-                ADOTAR
-              </Button>
-            </Link>
-          </Flex>
-          <br />
-        </Flex>
-        <br />
-      </Card>
+      <Flex
+        className="py-2"
+        width="100%"
+        direction="row"
+        align="center"
+        justify="center"
+        gap="4"
+        wrap="wrap"
+      >
+        <EventCard
+          name="Evento EXEMPLO"
+          URL="https://m.vitoria.es.gov.br/recursos/imagens/banco/2021/09/29/94889/ampliada.jpg"
+          ALT="LHÇH"
+          date="25/03"
+          time="13:30"
+          duration="3h"
+          description="
+          Venha fazer parte de um dia cheio de amor e compaixão em nosso evento de adoção de animais! Junte-se a nós enquanto proporcionamos a oportunidade perfeita para você encontrar o seu novo companheiro peludo. Uma variedade de cães e gatos adoráveis, de todas as idades e tamanhos, aguardam ansiosamente por um lar amoroso. Este evento é uma celebração do amor incondicional que os animais podem oferecer, e estamos comprometidos em fazer com que cada encontro seja uma história de sucesso. Venha fazer a diferença na vida de um animal e encher o seu coração com a alegria que só um pet adotado pode proporcionar!"
+          location="Parque Pianista Manolo Cabral"
+          linkToLocation="https://maps.app.goo.gl/91u6NgbfznN2oudr7"
+        />
+           <EventCard
+          name="Evento EXEMPLO"
+          URL="https://m.vitoria.es.gov.br/recursos/imagens/banco/2021/09/29/94889/ampliada.jpg"
+          ALT="LHÇH"
+          date="25/03"
+          time="13:30"
+          duration="3h"
+          description="
+          Venha fazer parte de um dia cheio de amor e compaixão em nosso evento de adoção de animais! Junte-se a nós enquanto proporcionamos a oportunidade perfeita para você encontrar o seu novo companheiro peludo. Uma variedade de cães e gatos adoráveis, de todas as idades e tamanhos, aguardam ansiosamente por um lar amoroso. Este evento é uma celebração do amor incondicional que os animais podem oferecer, e estamos comprometidos em fazer com que cada encontro seja uma história de sucesso. Venha fazer a diferença na vida de um animal e encher o seu coração com a alegria que só um pet adotado pode proporcionar!"
+          location="Parque Pianista Manolo Cabral"
+          linkToLocation="https://maps.app.goo.gl/91u6NgbfznN2oudr7"
+        />
+           <EventCard
+          name="Evento EXEMPLO"
+          URL="https://m.vitoria.es.gov.br/recursos/imagens/banco/2021/09/29/94889/ampliada.jpg"
+          ALT="LHÇH"
+          date="25/03"
+          time="13:30"
+          duration="3h"
+          description="
+          Venha fazer parte de um dia cheio de amor e compaixão em nosso evento de adoção de animais! Junte-se a nós enquanto proporcionamos a oportunidade perfeita para você encontrar o seu novo companheiro peludo. Uma variedade de cães e gatos adoráveis, de todas as idades e tamanhos, aguardam ansiosamente por um lar amoroso. Este evento é uma celebração do amor incondicional que os animais podem oferecer, e estamos comprometidos em fazer com que cada encontro seja uma história de sucesso. Venha fazer a diferença na vida de um animal e encher o seu coração com a alegria que só um pet adotado pode proporcionar!"
+          location="Parque Pianista Manolo Cabral"
+          linkToLocation="https://maps.app.goo.gl/91u6NgbfznN2oudr7"
+        />
+           <EventCard
+          name="Evento EXEMPLO"
+          URL="https://m.vitoria.es.gov.br/recursos/imagens/banco/2021/09/29/94889/ampliada.jpg"
+          ALT="LHÇH"
+          date="25/03"
+          time="13:30"
+          duration="3h"
+          description="
+          Venha fazer parte de um dia cheio de amor e compaixão em nosso evento de adoção de animais! Junte-se a nós enquanto proporcionamos a oportunidade perfeita para você encontrar o seu novo companheiro peludo. Uma variedade de cães e gatos adoráveis, de todas as idades e tamanhos, aguardam ansiosamente por um lar amoroso. Este evento é uma celebração do amor incondicional que os animais podem oferecer, e estamos comprometidos em fazer com que cada encontro seja uma história de sucesso. Venha fazer a diferença na vida de um animal e encher o seu coração com a alegria que só um pet adotado pode proporcionar!"
+          location="Parque Pianista Manolo Cabral"
+          linkToLocation="https://maps.app.goo.gl/91u6NgbfznN2oudr7"
+        />
+           <EventCard
+          name="Evento EXEMPLO"
+          URL="https://m.vitoria.es.gov.br/recursos/imagens/banco/2021/09/29/94889/ampliada.jpg"
+          ALT="LHÇH"
+          date="25/03"
+          time="13:30"
+          duration="3h"
+          description="
+          Venha fazer parte de um dia cheio de amor e compaixão em nosso evento de adoção de animais! Junte-se a nós enquanto proporcionamos a oportunidade perfeita para você encontrar o seu novo companheiro peludo. Uma variedade de cães e gatos adoráveis, de todas as idades e tamanhos, aguardam ansiosamente por um lar amoroso. Este evento é uma celebração do amor incondicional que os animais podem oferecer, e estamos comprometidos em fazer com que cada encontro seja uma história de sucesso. Venha fazer a diferença na vida de um animal e encher o seu coração com a alegria que só um pet adotado pode proporcionar!"
+          location="Parque Pianista Manolo Cabral"
+          linkToLocation="https://maps.app.goo.gl/91u6NgbfznN2oudr7"
+        />
+      </Flex>
     </div>
   );
 };
 
-export default Home;
+export default Adoption;

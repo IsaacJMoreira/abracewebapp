@@ -56,14 +56,16 @@ const Home = () => {
                 ""
               ) : (
                 <Card variant="classic">
-                  
                   <NextImage src={PixIMG} alt="mock pix" />
-                  <Text  as="div" size='1'  align='center' color='lime'> aponte a câmera do seu smartphone ou copie a chave abaixo</Text>
-                  
-                  <Card >
+                  <Text as="div" size="1" align="center" color="lime">
+                    {" "}
+                    aponte a câmera do seu smartphone ou copie a chave abaixo
+                  </Text>
+
+                  <Card>
                     <Flex direction="row" gap="1" justify="between">
-                    <CopyIcon width="16" height="16" />
-                    <Separator orientation="vertical" size='1'/>
+                      <CopyIcon width="16" height="16" />
+                      <Separator orientation="vertical" size="1" />
                       <Text as="div" size="1" color="lime">
                         <Link href="/pix">
                           65465lkGBSD65adfgsdLKLKNL56546lkhjllkLJ654
@@ -71,7 +73,9 @@ const Home = () => {
                       </Text>
                     </Flex>
                   </Card>
-                  <Text as='div' size='4' color='tomato' align='center'>QR-CODE E CHAVE MERAMENTE ILUSTRATIVOS</Text>
+                  <Text as="div" size="4" color="tomato" align="center">
+                    QR-CODE E CHAVE MERAMENTE ILUSTRATIVOS
+                  </Text>
                 </Card>
               )}
 
@@ -96,18 +100,20 @@ const Home = () => {
                   continue nos ajudando
                 </Text>
                 <Flex align="center" direction="row" justify="between" gap="4">
-                  <Link href="/help">
+                  <Link href="/donate">
                     <STDButton
                       iconAlt="Doe"
                       iconNI={DONATEIcon}
                       text="quero doar"
                     />
                   </Link>
-                  <STDButton
-                    iconAlt="vountariar"
-                    iconNI={VOLUNTEERIcon}
-                    text="voluntariar"
-                  />
+                  <Link href="/volunteer">
+                    <STDButton
+                      iconAlt="vountariar"
+                      iconNI={VOLUNTEERIcon}
+                      text="voluntariar"
+                    />
+                  </Link>
                 </Flex>
               </Flex>
               <Text align="center" size="1" weight="bold" as="div">

@@ -73,9 +73,10 @@ const Home = () => {
               </Text>
               <Link href="https://wa.me//558588128654?text=Oi!%20Gostaria%20%20de%20doar%20alimentos!">
                 <NextImage
-                className="w-40"
-                src={WhatsAppIcon}
-                alt="WhatsApp da ABRACE"/>
+                  className="w-40"
+                  src={WhatsAppIcon}
+                  alt="WhatsApp da ABRACE"
+                />
               </Link>
 
               <Flex align="center" direction="column" justify="between" gap="4">
@@ -83,18 +84,20 @@ const Home = () => {
                   continue nos ajudando
                 </Text>
                 <Flex align="center" direction="row" justify="between" gap="4">
-                  <Link href="/help">
+                  <Link href="/donate">
                     <STDButton
                       iconAlt="Doe"
                       iconNI={DONATEIcon}
                       text="quero doar"
                     />
                   </Link>
-                  <STDButton
-                    iconAlt="vountariar"
-                    iconNI={VOLUNTEERIcon}
-                    text="voluntariar"
-                  />
+                  <Link href="/volunteer">
+                    <STDButton
+                      iconAlt="voluntariar"
+                      iconNI={VOLUNTEERIcon}
+                      text="voluntariar"
+                    />
+                  </Link>
                 </Flex>
               </Flex>
               <Text align="center" size="1" weight="bold" as="div">

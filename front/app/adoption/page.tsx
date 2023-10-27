@@ -65,6 +65,7 @@ const Adoption = () => {
           weight={10}
           weightUnity="Kg"
           ageUnity="anos*"
+          petID="123456"
         />
         <AdoptionCard
           name="Thomas"

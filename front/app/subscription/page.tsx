@@ -130,18 +130,20 @@ const Home = () => {
                   continue nos ajudando
                 </Text>
                 <Flex align="center" direction="row" justify="between" gap="4">
-                  <Link href="/help">
+                <Link href="/donate">
                     <STDButton
                       iconAlt="Doe"
                       iconNI={DONATEIcon}
                       text="quero doar"
                     />
                   </Link>
-                  <STDButton
-                    iconAlt="vountariar"
-                    iconNI={VOLUNTEERIcon}
-                    text="voluntariar"
-                  />
+                  <Link href="/volunteer">
+                    <STDButton
+                      iconAlt="vountariar"
+                      iconNI={VOLUNTEERIcon}
+                      text="voluntariar"
+                    />
+                  </Link>
                 </Flex>
               </Flex>
               <Text align="center" size="1" weight="bold" as="div">
