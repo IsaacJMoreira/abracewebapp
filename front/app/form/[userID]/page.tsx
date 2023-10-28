@@ -1,6 +1,6 @@
 "use client";
 import * as Tabs from "@radix-ui/react-tabs";
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import {
   Badge,
   Box,
@@ -26,7 +26,11 @@ import {
 import * as Progress from "@radix-ui/react-progress";
 import * as Form from "@radix-ui/react-form";
 
-const FormAbrace = () => {
+interface MyProps{
+  params: {userID: string}
+}
+
+const FormAbrace: FC<MyProps> = ({ params }) => {
   const [progress, setProgress] = useState(10);
   return (
     <>
@@ -45,7 +49,7 @@ const FormAbrace = () => {
           size="4"
           className="w-fit"
         >
-          ficha de cadastro
+          ficha de cadastro de {params.userID}
         </Text>
 
         <Flex

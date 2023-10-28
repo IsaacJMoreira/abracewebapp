@@ -138,7 +138,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
                   Clique no botão abaixo para concluir o seu perfil.
                 </strong>
               </Text>
-              <Link href="/form">
+              <Link href={`/form/${props.userName}`}>
                 <Button variant="surface">
                   <ClipboardIcon width="18" height="18" />
                   Responder ao questionário
