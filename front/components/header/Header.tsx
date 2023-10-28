@@ -51,7 +51,7 @@ interface MyProps {
 }
 
 const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
-  const [progress, setProgress] = useState(100);
+  const [progress, setProgress] = useState(10);
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -62,7 +62,6 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
           <ChevronDownIcon height="18" width="18" />
         </Button>
       </Dialog.Trigger>
-
       <Dialog.Content>
         <Flex direction="row" align="start" justify="between" gap="3">
           <Dialog.Title>{props.userName}</Dialog.Title>
@@ -159,13 +158,7 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
                 <br />
                 Te convidamos para conhecer seu futuro melhor amigo!
               </Text>
-              <Separator orientation="horizontal" size="4" />
-              <Link href="/profile">
-                <Button variant="surface">
-                  <PersonIcon />
-                  meu perfil
-                </Button>
-              </Link>
+              
             </>
           )}
 
