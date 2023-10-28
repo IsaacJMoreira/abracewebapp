@@ -46,6 +46,7 @@ const Adoption = () => {
           Venha fazer parte de um dia cheio de amor e compaixão em nosso evento de adoção de animais! Junte-se a nós enquanto proporcionamos a oportunidade perfeita para você encontrar o seu novo companheiro peludo. Uma variedade de cães e gatos adoráveis, de todas as idades e tamanhos, aguardam ansiosamente por um lar amoroso. Este evento é uma celebração do amor incondicional que os animais podem oferecer, e estamos comprometidos em fazer com que cada encontro seja uma história de sucesso. Venha fazer a diferença na vida de um animal e encher o seu coração com a alegria que só um pet adotado pode proporcionar!"
           location="Parque Pianista Manolo Cabral"
           linkToLocation="https://maps.app.goo.gl/91u6NgbfznN2oudr7"
+          eventID="123"
         />
            <EventCard
           name="Evento EXEMPLO"

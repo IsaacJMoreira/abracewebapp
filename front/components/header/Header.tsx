@@ -47,10 +47,11 @@ interface MyProps {
   changeName?: any;
   changeLogin?: any;
   phoneNumber?: string;
+  userID?: string;
 }
 
 const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
-  const [progress, setProgress] = useState(10);
+  const [progress, setProgress] = useState(100);
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -67,48 +68,42 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
           <Dialog.Title>{props.userName}</Dialog.Title>
           {progress < 100 ? (
             <Card variant="ghost" className=" w-40 p-1 relative -top-5">
-            <Flex
-              align="center"
-              justify="between"
-              gap="3"
-              direction="row"
-            >
-              <Box className="w-full">
-                <div
-                  className="w-full rounded-md gap-0  relative top-3"
-                  style={{ transform: `translateX(${progress - 5.5}%)` }}
-                >
-                  <Flex
-                    direction="column"
-                    gap="0"
-                    justify="between"
-                    align="start"
+              <Flex align="center" justify="between" gap="3" direction="row">
+                <Box className="w-full">
+                  <div
+                    className="w-full rounded-md gap-0  relative top-3"
+                    style={{ transform: `translateX(${progress - 5.5}%)` }}
                   >
-                    <Text as="div" size="1">{`${progress}%`}</Text>
-                    <TriangleDownIcon className="relative -top-2" />
-                  </Flex>
-                </div>
+                    <Flex
+                      direction="column"
+                      gap="0"
+                      justify="between"
+                      align="start"
+                    >
+                      <Text as="div" size="1">{`${progress}%`}</Text>
+                      <TriangleDownIcon className="relative -top-2" />
+                    </Flex>
+                  </div>
 
-                <Progress.Root
-                  className="relative overflow-hidden bg-lime-900 rounded-full w-100 h-[10px]"
-                  style={{
-                    transform: "translateZ(0)",
-                  }}
-                  value={progress}
-                >
-                  <Progress.Indicator
-                    className="bg-lime-300 w-full h-full transition-transform duration-[660ms] ease-[cubic-bezier(0.65, 0, 0.35, 1)]"
+                  <Progress.Root
+                    className="relative overflow-hidden bg-lime-900 rounded-full w-100 h-[10px]"
                     style={{
-                      transform: `translateX(-${100 - progress}%)`,
+                      transform: "translateZ(0)",
                     }}
-                  />
-                </Progress.Root>
-                
-              </Box>
-            </Flex>
-          </Card>
+                    value={progress}
+                  >
+                    <Progress.Indicator
+                      className="bg-lime-300 w-full h-full transition-transform duration-[660ms] ease-[cubic-bezier(0.65, 0, 0.35, 1)]"
+                      style={{
+                        transform: `translateX(-${100 - progress}%)`,
+                      }}
+                    />
+                  </Progress.Root>
+                </Box>
+              </Flex>
+            </Card>
           ) : (
-            <Badge>
+            <Badge size='1'>
               <CheckboxIcon />
               {`${progress}%`}
             </Badge>
@@ -135,19 +130,20 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
                 pet nem ser voluntário ABRACE.
                 <br />
                 Para concluir o seu perfil, é necessário o preenchimento do
-                nosso questionário. Isto levará cerca de<strong> 10 min.</strong> Todas as
-                perguntas e informações requeridas foram desenvolvidas para
-                garantir que um processo de adoção responsável.
+                nosso questionário. Isto levará cerca de
+                <strong> 10 min.</strong> Todas as perguntas e informações
+                requeridas foram desenvolvidas para garantir que um processo de
+                adoção responsável.
                 <br />
                 <strong>
                   Clique no botão abaixo para concluir o seu perfil.
                 </strong>
               </Text>
               <Link href="/form">
-              <Button variant="surface">
-                <ClipboardIcon width="18" height="18" />
-                Responder ao questionário
-              </Button>
+                <Button variant="surface">
+                  <ClipboardIcon width="18" height="18" />
+                  Responder ao questionário
+                </Button>
               </Link>
             </>
           ) : (
@@ -180,6 +176,14 @@ const LoggedInModal: FC<MyProps> = React.forwardRef(function (props, ref) {
                 <ExitIcon width="18" height="18" />
                 Logout
               </Button>
+            </Dialog.Close>
+            <Dialog.Close>
+              <Link href={`/user/${props.userName}`}>
+                <Button variant="surface" onClick={props.changeLogin}>
+                  <PersonIcon width="18" height="18" />
+                  Perfil
+                </Button>
+              </Link>
             </Dialog.Close>
             <Dialog.Close>
               <Button variant="surface">

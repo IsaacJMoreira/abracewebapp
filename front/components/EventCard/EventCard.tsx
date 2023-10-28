@@ -35,13 +35,20 @@ interface MyProps {
   linkToLocation: string;
   URL: string;
   ALT: string;
+  eventID?: string;
 }
 
-const Disclaimer = () => {
+interface DisclaimerProps {
+  eventID?: string;
+}
+
+const Disclaimer: FC<DisclaimerProps> = (props) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button variant="surface">VOLUNTARIAR</Button>
+        <Link href={`/volunteer/${props.eventID}`} >
+          <Button variant="surface" className="w-full">VOLUNTARIAR</Button>
+        </Link>
       </Dialog.Trigger>
 
       <Dialog.Content>
@@ -63,33 +70,28 @@ const Disclaimer = () => {
               No entanto, compreendemos que imprevistos podem ocorrer, e é por
               isso que pedimos a todos os voluntários que, caso precisem
               desistir da presença em um compromisso, nos avisem com pelo menos
-              <strong> 24 horas de antecedência</strong>, permitindo-nos ajustar nossa programação
-              e garantir que nossos resgates e cuidados aos animais continuem de
-              forma eficaz e organizada. Cada esforço conjunto é valioso na luta
-              contra o abandono de animais de estimação, e sua dedicação faz a
-              diferença.
+              <strong> 24 horas de antecedência</strong>, permitindo-nos ajustar
+              nossa programação e garantir que nossos resgates e cuidados aos
+              animais continuem de forma eficaz e organizada. Cada esforço
+              conjunto é valioso na luta contra o abandono de animais de
+              estimação, e sua dedicação faz a diferença.
             </Text>
-           
-              
-              <Flex align="center" direction="row" justify="between" gap="4">
-                <Dialog.Close>
-                  <Button variant="surface">
-                    <ChevronLeftIcon width="18" height="18" />
-                    voltar
-                  </Button>
-                </Dialog.Close>
 
-                <Dialog.Close>
+            <Flex align="center" direction="row" justify="between" gap="4">
+              <Dialog.Close>
+                <Button variant="surface">
+                  <ChevronLeftIcon width="18" height="18" />
+                  voltar
+                </Button>
+              </Dialog.Close>
+
+              <Dialog.Close>
                 <Button variant="surface" className="w-32">
                   <HeartFilledIcon width="18" height="18" />
                   inscrever
                 </Button>
               </Dialog.Close>
-                
-              </Flex>
-
-              
-            
+            </Flex>
           </Flex>
         </Flex>
       </Dialog.Content>
@@ -169,8 +171,10 @@ const EventCard: FC<MyProps> = (props) => {
         <Text as="div" size="3">
           {props.description}
         </Text>
-        <Text as='div'>LOCAL: <Link href={props.linkToLocation}>{props.location}</Link></Text>
-        <Disclaimer />
+        <Text as="div">
+          LOCAL: <Link href={props.linkToLocation}>{props.location}</Link>
+        </Text>
+        <Disclaimer eventID={props.eventID} />
       </Flex>
     </Card>
   );
