@@ -16,28 +16,28 @@ import {
 import { HeartFilledIcon } from "@radix-ui/react-icons";
 
 interface MyProps {
-  params: { adopt: string };
+  params: { eventID: string };
 }
 
 const Adopt: FC<MyProps> = ({ params }) => {
   return (
     <>
       <Text as="div" size="3" color="tomato" weight="bold">
-        Adotar animal com ID: {params.adopt}
+        Iscrição no evento com ID: {params.eventID}
       </Text>
       <NextImage
-        src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"
+        src="https://m.vitoria.es.gov.br/recursos/imagens/banco/2021/09/29/94889/ampliada.jpg"
         alt="exemplo de dog"
         width="450"
         height="100"
       />
       <Text as="div">
-        AQUI, DEVEMOS TER UM DISLAIMER A RESPEITO DE COMO O PROCESSO DE ADOÇÃO
+        AQUI, DEVEMOS TER UM DISLAIMER A RESPEITO DE COMO O PROCESSO DE VOLUNTARIADO
         FUNCIONA.
       </Text>
       <Button variant="solid" onClick={()=>alert("intenção de adoção enviada! Agora basta esperar o contato da equipe ABRACE")}>
         <HeartFilledIcon width="18" height="18" />
-        sim, estou ciente. quero adotar
+        sim, estou ciente. quero ser voluntário
       </Button>
     </>
   );
