@@ -46,9 +46,9 @@ const Disclaimer: FC<DisclaimerProps> = (props) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Link href={`/volunteer/${props.eventID}`} >
-          <Button variant="surface" className="w-full">VOLUNTARIAR</Button>
-        </Link>
+        <Button variant="surface" className="w-full">
+          VOLUNTARIAR
+        </Button>
       </Dialog.Trigger>
 
       <Dialog.Content>
@@ -86,10 +86,12 @@ const Disclaimer: FC<DisclaimerProps> = (props) => {
               </Dialog.Close>
 
               <Dialog.Close>
-                <Button variant="surface" className="w-32">
-                  <HeartFilledIcon width="18" height="18" />
-                  inscrever
-                </Button>
+                <Link href={`/volunteer/${props.eventID}`}>
+                  <Button variant="surface" className="w-32">
+                    <HeartFilledIcon width="18" height="18" />
+                    inscrever
+                  </Button>
+                </Link>
               </Dialog.Close>
             </Flex>
           </Flex>
